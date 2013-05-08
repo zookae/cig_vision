@@ -1,0 +1,158 @@
+* new aspects of games
+  need better AI for live ops, not just packaged product
+** long-term, persistent data on players
+   no longer limited to moment-to-moment, short-term player actions
+   data is ubiquitous: in-game, cross-game, related to real life (e.g. AR games, exergaming, Miiverse)
+   -> enables AI to model long-term patterns in player behavior and develop a transferrable model of gameplay skills
+** distribution platforms
+   industry: Steam, EA Origin, Zynga, Facebook, Kongregate, etc.
+   modding: LB/LB2, SC/SC2, WoW addons, (modding book)
+   able to continually A/B test and iterate on product in response to users
+   -> enables AI to automatically modify game in response to ongoing development
+   -> shifts from short-term NPC reactions or creating a full game to understanding operation of game and relationship to other games
+   -> bigger emphasis on externalities of other games, transaction/payment methods
+** ecosystem of games
+   design and development is for second-screen; multi-platform; multi-game
+   better tools means people can turn out single games well, but cross-game aspects are wild west
+   -> AI systems should shift from game-specific to capable of handling different game settings; e.g. BTs are generic control for most avatar-bound NPCs, MDPs+utility models are recently becoming popular for generality
+   -> from single player to communities of players (w/in and outside game)
+   -> from characters w/in game to players across characters (and consumers)
+* waves of game AI
+** game <-> user
+   reactive NPCs
+   surrogate for opponents / partners
+*** overview
+    single/groups of NPCs interacting w/human on moment-to-moment basis
+    alpha-beta search -> MCTS
+    planning, BTs, HTNs
+    fuzzy reasoning
+    influence maps
+*** sources
+    game AI book?
+** (game <-> user) <-> designer
+   PCG + authoring tools - ease creation
+   player modeling w/in game - understand / visualize results (game analytics)
+   AI as game design tool; AI agent as designer
+*** overview
+    ML to support analysis of games
+    AI to generate content as tool or surrogate
+    AI to adapt content
+    drama management
+    evolutionary computing (now MCTS?)
+    asp + combinatorial search methods
+    multi-agent systems (pons)
+    machine learning (yu)
+    [Q: game sketching tools? too heavy on existing?]
+    -- agustin; 
+*** sources
+    yannakakis + togelius PCG overview, EDPCG
+    yannakakis next wave paper
+    bakkes on adaptive AI
+    hendrickx on pcg overview
+    togelius+schmidhuber; browne; cook(mech miner); mahlmann
+    a smith ASP paper, VF, Ludocore; horswill+foged
+    Nelson papers; Treanor
+    Mateas on EAI, Facade, Prom Week
+    g smith for mixed initiative
+    DM overviews (Mateas 1999, Roberts+Isbell, Riedl+Bulitko)
+    game analytics: medler, drachen, el nasr, game analytics book, wallner game analysis viz overview
+    design experiments/optimization: lomas, RRT aiide, rafferty+kujala for optimal experimental design, jaffe, anderson (here or wave 3?)
+    soc modeling[here or elsewhere?]: williams, ...
+** ((game <-> user) <-> designer) <-> developer
+   cross-game representations for game systems (formal models)
+   cross-game player models (not just per-game characters)
+   --> differences b/t character, player, customer
+   multi-game/cross-game generation methods
+   AI agents that interface w/player across individual aspects (tutorials, sales agent?, long-term companion/pet)
+   AI agents interfacing with player community
+   proactive sensing, ARG, and interface b/t "RL" and game activities
+*** overview
+    generic game representations
+*** sources
+    formalisms: Jarvinen, Cook (skill atoms), Dormans, ebner, zagal+mateas
+    bickmore for lifelong agents
+    amershi + interactive ML? zeng? shivaswamy? settles? 
+    bengio for rep learning? nan li?
+    king on robot scientist?
+
+    pcg generator generator?
+    pereira for socailly present board game agents (w/in vs cross-game)
+    crowdsource: shaker, boyang li, orkin
+    player models: trueskill, huang halo, backrach+minka, 
+    
+    Q: WHERE DO GENERAL GAME PLAYING AGENTS FIT?
+    -- bellemare for environment genesereth description
+* adding layers
+** game <-> user => 3.0
+   reactive NPCs that data-mine appropriate responses
+   long-term w/in game companions
+   long-term meta-game companions
+** (game <-> user) <-> designer => 3.0
+   generating content across games -> e.g. Kongregate achievements in meta-game
+   cross-game player modeling
+   community modeling / matchmaking
+** examples
+*** data-driven NPCs
+    -- reponsive to player + game design models
+    -- acting to improve toward experience
+    -- acting to gain info on player for re-use
+*** long-term relationships w/companion/rival
+    -- continues to adapt + recall long-term history w/player
+    -- potentially a recurring character/partner across many games or contexts
+*** meta-game guide NPCs
+    -- your guide to Miiverse
+    -- concept of drama manager taken to cross-game setting
+    -- [Q: why is this point _game_ AI and not just AI?]
+*** tutoring + mentoring
+    -- automatically matching players to appropriate content
+    -- examples: ITSs w/exploratory domains
+    proactive sensing
+    -- using players to learn about consumption habits, world
+* shifts in focus
+** producer vs consumer dichotomy -> developer
+   producer: game designer (tools)
+   -- Nelson, Treanor, Smith, EAI
+   consumer: player (models)
+   -- game analytics (Drachen, Yannakakis, Medler), soc sci of games (Williams)
+   developer: game design space learning/modeling
+** w/in game activities -> game content -> game ecosystem
+* new problems
+** interaction to teach AI
+   big data is useless/meaningless unless we find better ways to teach AI
+   -- users provide "demonstrations" ala Spore, NPCEdit, Mehta work
+   -- users provide subjective feedback ala Yu, Yannakakis
+   -- users tweak existing content ala Nickerson, (crowdsoruce)
+   -- interactive ML, GWAPs starting to explore, but how contextualize w/in game
+** AI as learning to design games + experiment
+   logical conclusion of A/B testing and analytics is automated iteration
+   early work should focus on minor changes and ways to intelligently search
+   micro-games designed for particular user + goal
+   examples: Cook, Browne, Schmidhuber, Hastings
+   also use tools for authoring w/in system: Smith, Treanor, Nelson
+   --> need to move beyond trying a single game to spanning games as a design space (game ecosystem)
+** discovery
+   (1) large virtual worlds
+   (2) large sets of micro-games
+   how do users discover what they want in the game?
+   find new things they didn't expect?
+   examples: Yu, 
+** matchmaking
+   users are content
+   -- social aspects of game (groups) are key
+   users make content
+   -- active creation = Spore, Second Life, etc.
+   -- passive creation = Demon's Souls
+   examples: TrueSkill, ELO, (game analytics team ratings)
+** cross-game modeling
+   need to understand _players_, not just _characters_
+   how transfer behavioral models b/t games?
+   how model relationship b/t game features + users to adapt appropriately?
+** business cycle: acquisition, retention, referral, re-acquisition
+*** acquisition
+    mentoring/tutoring AI to adapt structure of game to suit player lifecycle
+*** retention
+    matchmaking + recommendation to focus on high-value content w/in game
+*** referral
+    promotion of player socialization
+*** re-acquisition
+    cross-game player models
