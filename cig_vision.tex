@@ -347,13 +347,15 @@
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
+\newcommand{\mytodo}[1]{\textbf{[[#1]]}}
+
 
 \begin{document}
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Third Wave of Game AI}
-
+%\title{Third Wave of Game AI}
+\title{Game AI 3.0: A Desiderata}
 
 % author names and affiliations
 % use a multiple column layout for up to three different
@@ -433,58 +435,184 @@ The abstract goes here.
 
 
 
-\section{Introduction}
-% no \IEEEPARstart
-This demo file is intended to serve as a ``starter file''
-for IEEE conference papers produced under \LaTeX\ using
-IEEEtran.cls version 1.7 and later.
-% You must have at least 2 lines in the paragraph with the drop letter
-% (should never be an issue)
+%\section{Introduction}
+%% no \IEEEPARstart
+%This demo file is intended to serve as a ``starter file''
+%for IEEE conference papers produced under \LaTeX\ using
+%IEEEtran.cls version 1.7 and later.
+%% You must have at least 2 lines in the paragraph with the drop letter
+%% (should never be an issue)
 
 \section{Introduction}
 % intro 5 forces
 Over the past several years the game industry has undergone a series of major changes. The increasing prominence of online and persistent games, rise of mobiles games and digital distribution platforms, and emergence of new business models have all changed fundamental aspects of making and playing games. Players are more diverse, have access to games in more places and at more times, and produce more data and content for developers than ever before. Across these changes five forces have come to the fore:
-\begin{description}
-\item[\textbf{persistent games}] \hfill \\ The rise of MMOGs, social games, and long-term or recurring game experiences has led to long-term data on players within games. Many games have players join, play over long periods of time, and potentially rejoin at later times. Developers are increasingly pressed to develop content that provides for long-term engagement with a game, rather than a closed experience with clear beginning and end.
+\begin{enumerate}
+\item Games are becoming more persistent and presenting longer-term experiences %;
+\item Game developers are starting to see their game titles as an ecosystem wherein players may move from game to game %;
+\item Greater emphasis on community and social gaming %;
+\item An emerging interest from developers and players in coupling the real world and virtual world %; and
+\item Developers are embracing end-user generated content %. 
+\end{enumerate}
 
-\item[\textbf{ecosystem of games}] \hfill \\ Developers have a wider variety of tools to build games and lowered barriers to distributing games to new users. Together this has led to a greater emphasis on keeping players engaged within an ecosystem of games from a single developer, rather than focusing on experiences only within one game. Developers are increasingly driven to provide new content of multiple kinds that engages players across games. The increasing diversity of game players has led to additional emphasis on ensuring a portfolio of games provides a diverse range of experiences, rather than create a kind of experience within a single game.
+\noindent
+Some of these forces have been around for a number of years, while others are just beginning to emerge.
+The consequence of these forces present a profound opportunity for Artificial Intelligence, Computational Intelligence, and Machine Learning to play an even greater role in the development of computer games and the delivery of engaging real-time experiences to players. 
 
-\item[\textbf{community}] \hfill \\ Player communities around games have emerged as a major driving force for the success (and failure) of games. Continuing to engage with communities, providing support for players to socialize within the community, and managing the ways players impact one another's experiences (positively and negatively) are all increasingly pressing concerns.
+The most significant consequence of the shifting landscape of computer game development is the generation of massive amounts of data. 
+Researcher and game developers can leverage this data in a new paradigm of data-driven Game AI focused on how to use these sources of data to 
+%address novel research questions that emerge within these domains. 
+improve game development practices and to deliver more engaging experiences.
+However, we are not merely advocating that researchers and game developers adopt data-driven analogues to existing Game AI practices (although that would certainly be a worthy endeavor).]
+Instead, we are proposing that the massive amounts of data now available, coupled with a new understanding of the forces driving game development, have opened up a number of new, exciting research questions. 
+%[weak statement, want something stronger about need to respond]
 
-\item[\textbf{real-virtual coupling}] \hfill \\ Games are connecting to the real world in new and more widely used ways. Sensing systems ranging from the Kinect and Wiimote to mobile phone GPS provide more data on players' real-world environment. Output modalities from second screen experiences and mobile phone augmented reality to virtual reality are emerging as new ways to view game content. At the same time these technologies have introduced a host of challenges around how games can interface with and leverage this real-world context and respond to more unstructured forms of information.
+In this paper, we will present our desiderata on the future of Game AI, which we dub {\em Game AI 3.0}.
+%In particular we focus on the research questions that may soon be addressed, with pointers to places where we see initial steps toward Game AI 3.0 problems being taken. 
+We will first describe the shifting landscape of computer game development and the historical precedents behind our desiderata. 
+In the course of our desiderata, we will enumerate the new research questions that are arising and steps toward how they may be addressed. 
+%We 
+%and present some of the steps researchers and game developers are already beginning to take along this direction. 
+%In the course of our desiderata, 
+\mytodo{then what?}
 
-\item[\textbf{user-generated content}] \hfill \\ Games have historically provided many opportunities for modification (``modding'') and some degree of editing. Recently, however, this force has become a driving aspect of long-term success, exemplified by games including Minecraft, LittleBigPlanet, and Second Life. Developers are increasingly pressured to provide tools for users to create content, manage that content, and promote content within game communities.
-\end{description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{The Shifting Landscape of Game Development}
+
+In this section, we enumerate some of the prominent new forces that are shaping the way that computer game development companies create games. Many of these forces have arisen as a confluence of advances in computing technology and market forces that result from a maturation of the computer game industry.
+
+%\begin{description}
+%\item[\textbf{persistent games}] \hfill \\ 
+{\bf Persistent Games} 
+The rise of MMOGs, social games, and long-term or recurring game experiences has led to long-term data on players within games. Many games have players join, play over long periods of time, and potentially rejoin at later times. Developers are increasingly pressed to develop content that provides for long-term engagement with a game, rather than a closed experience with clear beginning and end.
+
+%\item[\textbf{ecosystem of games}] \hfill \\ 
+{\bf Ecosystem of Games}
+Developers have a wider variety of tools to build games and lowered barriers to distributing games to new users. Together this has led to a greater emphasis on keeping players engaged within an ecosystem of games from a single developer, rather than focusing on experiences only within one game. Developers are increasingly driven to provide new content of multiple kinds that engages players across games. The increasing diversity of game players has led to additional emphasis on ensuring a portfolio of games provides a diverse range of experiences, rather than create a kind of experience within a single game.
+
+%\item[\textbf{community}] \hfill \\ 
+{\bf Player Communities}
+Player communities around games have emerged as a major driving force for the success (and failure) of games. Continuing to engage with communities, providing support for players to socialize within the community, and managing the ways players impact one another's experiences (positively and negatively) are all increasingly pressing concerns.
+
+%\item[\textbf{real-virtual coupling}] \hfill \\ 
+{\bf Coupling of Real and Virtual Worlds}
+Games are connecting to the real world in new and more widely used ways. Sensing systems ranging from the Kinect and Wiimote to mobile phone GPS provide more data on players' real-world environment. Output modalities from second screen experiences and mobile phone augmented reality to virtual reality are emerging as new ways to view game content. At the same time these technologies have introduced a host of challenges around how games can interface with and leverage this real-world context and respond to more unstructured forms of information.
+
+%\item[\textbf{user-generated content}] \hfill \\ 
+{\bf User-Generated Content}
+Games have historically provided many opportunities for modification (``modding'') and some degree of editing. Recently, however, this force has become a driving aspect of long-term success, exemplified by games including Minecraft, LittleBigPlanet, and Second Life. Developers are increasingly pressured to provide tools for users to create content, manage that content, and promote content within game communities.
+%\end{description}
 % data-centric consequences
-Each of these forces provides massive amounts of data to game developers. Research in game AI can leverage this data in a new paradigm of data-driven game AI focused on how to use these sources of data to address novel research questions that emerge within these domains. [weak statement, want something stronger about need to respond]
 
-\section{3 Waves of Game AI}
-  [waves? metaphors? paradigms?]
-Data-driven game AI leads to a shift in the role of AI in game design and development. Historically, game AI has seen a shift between two waves of research. ``Classical'' game AI developed systems to mediate the role of AI between users and a game (Figure X). AI served the role of an artificial human opponent or playmate, enabling play without requiring other people or filling roles humans would be loathe to fill in a game. The second wave of game AI shifted to developing AI systems that mediate between designers and the coupled user-game systems they develop. AI served to analyze and visualize game data, model players within a game, generate game content, and even potentially adapt game content by fusing modeling and generation. The third wave of game AI that is emerging demands a further step back to study how AI can mediate between game producers and their portfolio of games. AI should support interacting with players and player communities over long spans of time, across multiple games, while bridging in-game and real-world systems and leveraging user-created content.
+Each of these forces provides massive amounts of data to game developers. 
+Research in game AI can leverage this data in a new paradigm of data-driven game AI focused on how to use these sources of data to address novel research questions that emerge within these domains. [weak statement, want something stronger about need to respond]
 
-It should be noted these three waves are not distinct phases, but overlapping sets of concerns and driving problems. Improvements in AI as game designers in turn supports new tools to mediate between a single game and users. Likewise, understanding users within an ecosystem of games leads to new problems for in-game NPC behavior.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Wave 1: AI Actor}
+\section{Background: Three Paradigms of Game AI}
+
+%  [waves? metaphors? paradigms?]
+
+In 2001, Laird and van Lent \mytodo{cite} put forth their seminal argument for AI in computer games as an academic pursuit. 
+They specifically argued that the pursuit of ``human-level'' AI systems could use computer games as testbeds for research because games were intermediate environments between the toy domains researchers had been using and the full complexity of the real world.
+While this opened Game AI as an academic endeavor, the automation of various aspects of computer games has been a part of the industrial practice of creating commercial computer games since the beginning. 
+
+{\em Game AI} refers to a set of tools---algorithms and representations---developed specifically to aid the creation of interactive, real-time, digital entertainment experiences.
+While games are played by humans, there are a number of aspects of the game playing experience that must be automated: roles that would be best performed by humans but are not practical to do so:
+
+\begin{itemize}
+\item Opponents and enemies that are meant to survive for only a short time before losing.
+\item Non-player characters in roles that are not ``fun'' to play such as shopkeepers, farmers, or victims.
+\item Companions in single-player experiences and non-player characters in support roles.
+\item Dungeon master.
+\item Game designer.
+\end{itemize}
+
+\noindent
+As we go down this list, game AI is charged with taking progressively more responsibility for the quality of the human player's experience in the game.
+
+%Data-driven game AI leads to a shift in the role of AI in game design and development. Historically, game AI has seen a shift between two waves of research. 
+%``Classical'' game AI developed systems to mediate the role of AI between users and a game (Figure X). AI served the role of an artificial human opponent or playmate, enabling play without requiring other people or filling roles humans would be loathe to fill in a game. The second wave of game AI shifted to developing AI systems that mediate between designers and the coupled user-game systems they develop. AI served to analyze and visualize game data, model players within a game, generate game content, and even potentially adapt game content by fusing modeling and generation. The third wave of game AI that is emerging demands a further step back to study how AI can mediate between game producers and their portfolio of games. AI should support interacting with players and player communities over long spans of time, across multiple games, while bridging in-game and real-world systems and leveraging user-created content.
+
+Historically, the earliest uses of artificial intelligence in computer games was to mediate the role of AI between users and the game.
+AI served the role of an artificial human opponent or playmate, enabling play without requiring other people or filling roles humans would be loathe to fill in a game.
+%
+A second use of artificial intelligence is in support of game designers and developers.
+That is, intelligent systems mediate between designers and the coupled user-game system.
+AI served to analyze and visualize game data, model players within a game, generate game content, and even potentially adapt game content by fusing modeling and generation.
+
+A third use for artificial intelligence is now beginning to emerge wherein intelligent systems mediate between game producers and entire portfolios of games.  
+Producers concern themselves with the entire set of games and game content being made by a company, along with related aspects of managing player communities.
+Under this paradigm, AI should support the interaction of players and player communities over long spans of time, across multiple games, while bridging in-game and real-world systems and leveraging user-created content.
+
+In the next sections, we elaborate on what we see as three paradigms for the usage of artificial intelligence in games.
+It should be noted these three paradigms are not distinct phases, but overlapping sets of concerns and driving problems. 
+%Improvements in AI as game designers in turn supports new tools to mediate between a single game and users. Likewise, understanding users within an ecosystem of games leads to new problems for in-game NPC behavior.
+
+\subsection{Game AI 1.0: AI as Actor}
 % % [feels rather list-like...]
 % % [needs a metaphor: wave1=???, wave2=designer, wave3=producer]
 % % game <-AI-> user
-The first wave of game AI examined how AI can substitute for humans within a game. Compared to non-game AI, game AI put a greater emphasis on creating engaging and entertaining experiences for users, rather than replicating exact human behavior. Competitive NPCs---such as Deep Blue and chess AI---emphasized techniques including alpha-beta search, heuristic reasoning, and compiling and leveraging gameplay database knowledge. Navigation, path-planning, and steering developed methods to author believable motions encoding design knowledge.  Reactive game NPCs employed techniques including state machines, fuzzy logic, decision trees, behavior trees, and most recently hierarchical task networks to aid authoring of character behaviors. More recently probabilistic and utility-based frameworks have come to the fore, along with a few but prominent examples of learning agents in games. Across these areas is the shared emphasis on optimizing for a player's experience within a game while meeting the tight constraints of running AI within a given game system.
+
+%\noindent
+%{\bf Game AI 1.0: AI as Actor}
+%
+The first paradigm of Game AI examined how AI can substitute for human players within a game. 
+Compared to non-game AI, game AI put a greater emphasis on creating engaging and entertaining experiences for users, 
+%rather than replicating exact human behavior.
+rather than maximizing a utility function such as score or win/loss rates. 
+%Competitive NPCs---such as Deep Blue and chess AI---emphasized techniques including alpha-beta search, heuristic reasoning, and compiling and leveraging gameplay database knowledge. Navigation, path-planning, and steering developed methods to author believable motions encoding design knowledge.  Reactive game NPCs employed techniques including state machines, fuzzy logic, decision trees, behavior trees, and most recently hierarchical task networks to aid authoring of character behaviors. More recently probabilistic and utility-based frameworks have come to the fore, along with a few but prominent examples of learning agents in games. Across these areas is the shared emphasis on optimizing for a player's experience within a game while meeting the tight constraints of running AI within a given game system.
+\mytodo{path planning, simple decision making (FSMs, Behavior Trees), sometimes even complex decision making (planning). What is cool 1.0 research? Starcraft?}
 
 
-\subsection{Wave 2: AI Designer}
+\subsection{Game AI 2.0: AI as Designer}
 % % (game <-> user) <-AI-> designer
-The second wave of game AI concerned itself with a metaphor of AI as a game designer. Game designers are responsible for building and defining a game, analyzing how players interact with the game, and iteratively refining a game to achieve a design vision. For AI designers the prominent challenges roughly align with procedural content generation to produce game content and game analytics to understand game content, with some exploring ways to fuse the two processes in a closed loop adaptation approach.
 
-Procedural content generation concerns itself with generating any and all components of games \cite{hendrikx2013:pcg} \cite{togelius2011:sbpcg}. Offline generation emphasizes producing content designers may curate or refine, while just-in-time generation focuses on tailoring content to a give user. Generation techniques have a taken a variety of approaches including evolutionary algorithms [REFS], constraint solvers [Horswill, Smith], and planning [REFs: story gen?]. A primary concern for these researchers has been ways to appropriately represent game content to suit generation algorithms, while still providing means for users to interact with generation systems to author desired content and outcomes.
+\mytodo{still too long}
 
-Game analytics studies aggregating, understanding, and visualizing player behavior to support designer understanding. Game data visualization [REFs] focuses on designer understanding game systems to inform the design of game systems and AI agents. Player modeling research [REFs] examines methods to describe and predict player behavior, potentially to be used by designers or automated AI systems in response. While not a traditional domain of game AI, player modeling has becoming increasingly prominent as AI agents shift to learning to adapt to players. Machine learning [REFs] and evolutionary computing [REFs] are the primary areas currently being employed to perform these modeling tasks.
+%\noindent
+%{\bf Game AI 2.0: AI as Designer}
+%
+The paradigm of game AI concerned itself with a metaphor of AI as a game designer. 
+Game designers are responsible for building and defining a game, analyzing how players interact with the game, and iteratively refining a game to achieve a design vision. 
+ 
+For AI designers the prominent challenges roughly align with Procedural Content Generation (PCG),
+% to produce game content and game analytics to understand game content, with some exploring ways to fuse the two processes in a closed loop adaptation approach.
+which
+%Procedural content generation
+concerns itself with generating any and all components of games \cite{hendrikx2013:pcg,togelius2011:sbpcg}. 
+\mytodo{cite Yannakakis' future of game AI paper?}
+%
+Offline content generation emphasizes producing content designers may curate or refine.
+The computer game industry has begun adopting offline content generation tools such as {\em Speedtree} for the purposes of increasing the efficiency of the game development process. 
+Online, or just-in-time, generation focuses on providing larger amounts of variation than human designers can achieve alone and/or tailoring content to a given user.
+%Procedural content generation concerns itself with generating any and all components of games \cite{hendrikx2013:pcg} \cite{togelius2011:sbpcg}. Offline generation emphasizes producing content designers may curate or refine, while just-in-time generation focuses on tailoring content to a give user. 
+%Generation techniques have a taken a variety of approaches including evolutionary algorithms [REFS], constraint solvers [Horswill, Smith], and planning [REFs: story gen?]. 
+A primary concern for these researchers has been (a) ways to appropriately represent game content to suit generation algorithms, while (b) providing means for users to interact with generation systems to author desired content and outcomes.
+%
+As noted, ``Game AI 2.0'' paradigm does not replace the 1.0 paradigm, but compliments it.
+Historically, content generation in the form of level generation in games such as Rogue has been around nearly as long as 1.0 Game AI techniques. \mytodo{more?} 
 
-Game adaptation combines content generation and player modeling to enable AI designers that tailor games to indivdual players. Game generation takes this adaptation process to its extreme by creating entire games driven by (real or simulated) feedback. Game adaptation emphasizes a closed loop of modeling player actions and adjust game content based on design goals for player behavior [REF: smith refraction, DM references], player skill acquisition [REF: andersen], or maximizing player enjoyment [Yu, Shaker], or preferences [Yu]. Prominent examples of game generation have explored the automatic generation of board games [REFs: Hom, Browne], platforming games [Cook], arcade games [Treanor, Nelson, Smith], and role-playing games [Zook?]. Across this research is a shared emphasis on encoding design knowledge both of game systems and design goals in a way that can be used to automatically adapt or create content.
+{\em Game adaptation} combines content generation and player modeling to enable AI designers that tailor games to individual players. Game generation takes this adaptation process to its extreme by creating entire games driven by (real or simulated) feedback. Game adaptation emphasizes a closed loop of modeling player actions and adjust game content based on design goals for player behavior [REF: smith refraction, DM references], player skill acquisition [REF: andersen], or maximizing player enjoyment [Yu, Thue, Shaker].
+%, or preferences [Yu]. 
+%Prominent examples of game generation have explored the automatic generation of board games [REFs: Hom, Browne], platforming games [Cook], arcade games [Treanor, Nelson, Smith], and role-playing games [Zook?]. Across this research is a shared emphasis on encoding design knowledge both of game systems and design goals in a way that can be used to automatically adapt or create content.
 
-\subsection{Wave 3: AI Producer}
+Another perspective on AI as designer is the use of AI in {\em interactive narratives}, a form of digital interactive experience in which users create or influence a dramatic storyline through their actions. AI approaches to interactive narrative involve dynamically manipulating the virtual world or  non-player characters in order to optimize players' experiences from a narrative standpoint \mytodo{cite Riedl AI Magazine}.
+
+The availability of large data sets is having an impact on those who see AI as designer.
+In particular, {\em game analytics} is the aggregation, understanding, and visualization of player behavior to support designer understanding. 
+Game data visualization [REFs] focuses on designer understanding game systems to inform the design of game systems and AI agents. Player modeling research [REFs] examines methods to describe and predict player behavior, potentially to be used by designers or automated AI systems in response. While not a traditional domain of game AI, player modeling has becoming increasingly prominent as AI agents shift to learning to adapt to players. Machine learning [REFs] and evolutionary computing [REFs] are the primary areas currently being employed to perform these modeling tasks.
+
+
+
+\subsection{Game AI 3.0: AI as Producer}
 % % ((game <-> user) <-> designer) <-AI-> producer/business
 
-The third wave of game AI uses a metaphor of AI as game producer. Producers concern themselves with the entire set of games and game content being made by a company, along with related aspects of managing player communities. AI producers mandate a shift from single player experiences within a closed game to extended player experiences within an open game, understanding a single player across multiple games, and understanding how multiple players interact as an out-of-game community. AI designers emphasized player models that captured the activity of a single user as a single character. AI producers require a shift to distinguishing characters (in-game characters or personas) from players (agents manipulating those characters). AI producers also leverage a broader sense of context for enhancing game experiences including the community of players, the real-world context of their activities, and the content they create for one another. Together, this research places a premium on broadening the scope of game AI to better integrate the increasingly pervasive nature of games into how games entertain and engage users. Games no longer are sharply bound by a single delivered product and game AI ought to respond by incorporating these newly opened borders for new research domains.
+The third paradigm of game AI uses a metaphor of AI as game producer. 
+In our metaphor, producers concern themselves with the entire set of games and game content being made by a company, along with related aspects of managing player communities. 
+AI producers mandate a shift from single player experiences within a closed game to extended player experiences within an open game, understanding a single player across multiple games, and understanding how multiple players interact as an out-of-game community. AI designers emphasized player models that captured the activity of a single user as a single character. AI producers require a shift to distinguishing characters (in-game characters or personas) from players (agents manipulating those characters). AI producers also leverage a broader sense of context for enhancing game experiences including the community of players, the real-world context of their activities, and the content they create for one another. Together, this research places a premium on broadening the scope of game AI to better integrate the increasingly pervasive nature of games into how games entertain and engage users. Games no longer are sharply bound by a single delivered product and game AI ought to respond by incorporating these newly opened borders for new research domains.
+
+\mytodo{Should emphasize data. We are kind of saying data comes with the new forces and it seems odd not to mention it again here.}
 
 \section{Five Force Research}
 % % TODO: better name
