@@ -342,24 +342,13 @@
 % There should be no need to do such things with IEEEtran.cls V1.6 and later.
 % (Unless specifically asked to do so by the journal or conference you plan
 % to submit to, of course. )
-<<<<<<< HEAD
 %\usepackage{hyperref}
 \usepackage[backref]{hyperref} % to see how much/where references are used
 \usepackage{cite}
 
-\newcounter{questionno}
-\addtocounter{questionno}{1}
-
-=======
-\usepackage{hyperref}
-
-% correct bad hyphenation here
-\hyphenation{op-tical net-works semi-conduc-tor}
 
 \newcounter{questionno}
 \addtocounter{questionno}{1}
-
->>>>>>> 38b41a2f62a60f6af6272ac8563459c1da9cb7a1
 
 \newcommand{\mytodo}[1]{\textbf{[[#1]]}}
 
@@ -612,11 +601,8 @@ Online, or just-in-time, generation focuses on providing larger amounts of varia
 %Generation techniques have a taken a variety of approaches including evolutionary algorithms [REFS], constraint solvers [Horswill, Smith], and planning [REFs: story gen?]. 
 A primary concern for these researchers has been (a) ways to appropriately represent game content to suit generation algorithms, while (b) providing means for users to interact with generation systems to author desired content and outcomes.
 %
-<<<<<<< HEAD
+
 As noted, the ``Game AI 2.0'' paradigm does not replace the 1.0 paradigm, but compliments it.
-=======
-As noted, ``Game AI 2.0'' paradigm does not replace the 1.0 paradigm, but compliments it.
->>>>>>> 38b41a2f62a60f6af6272ac8563459c1da9cb7a1
 Historically, content generation in the form of level generation in games such as Rogue has been around nearly as long as 1.0 Game AI techniques. \mytodo{more?} 
 
 {\em Game adaptation} combines content generation and player modeling to enable AI designers that tailor games to individual players. Game generation takes this adaptation process to its extreme by creating entire games driven by (real or simulated) feedback. Game adaptation emphasizes a closed loop of modeling player actions and adjust game content based on design goals for player behavior [REF: smith refraction, DM references], player skill acquisition [REF: andersen], or maximizing player enjoyment [Yu, Thue, Shaker].
@@ -679,16 +665,10 @@ In addition, adapting agent behaviors to foster long-term engagement stands as a
 
 %In machine learning the domain of lifelong learning investigates transferring knowledge between particular tasks, continually learning and refining knowledge, uncovering representations for complex information, and incorporating guidance or feedback from humans [good REF?]. For game AI these tasks manifest in terms of companions that work with players through a long series of open-ended (and possibly extending) tasks. As games now typically involve patches, expansions, downloadable content and other incremental updates research into how agents can adapt to these changes in a persistent game environment become increasingly valuable.
 
-<<<<<<< HEAD
 A central challenge for lifelong agents will be adapting to games with continually evolving content. 
 Lifelong agents must be able to adjust to new content from patches, expansions, downloadable content, and other incremental updates to the game the agent inhabits.
 Research in {\em lifelong machine learning} investigates how agents can transfer knowledge between particular tasks, continually learn and refine knowledge, uncover representations for complex information, and incorporate guidance or feedback from humans \cite{silver2013:lifelong-ml}.
 Addressing these challenges in for game agents can provide enormous benefits to developers of live and ongoing games.
-=======
-The key to lifelong agents in games may be algorithms that learn from interactions with individual players. \mytodo{player modeling?}
-Additionally, lifelong agents must be able to adapt to new content from patches, expansions, downloadable content, and other incremental updates to the game the agent inhabits.
-Research into machine learning for {\em lifelong learning} investigates the transfer of knowledge between particular tasks, continually learning and refining knowledge, uncovering representations for complex information, and incorporating guidance or feedback from humans. 
->>>>>>> 38b41a2f62a60f6af6272ac8563459c1da9cb7a1
 
 
 \subsubsectionx{How can a Game AI system support longitudinal gameplay?}
