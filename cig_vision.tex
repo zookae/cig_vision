@@ -355,7 +355,7 @@
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
 %\title{Third Wave of Game AI}
-\title{Game AI 3.0: A Desiderata}
+\title{Game AI 3.0}
 
 % author names and affiliations
 % use a multiple column layout for up to three different
@@ -614,50 +614,108 @@ AI producers mandate a shift from single player experiences within a closed game
 
 \mytodo{Should emphasize data. We are kind of saying data comes with the new forces and it seems odd not to mention it again here.}
 
-\section{Five Force Research}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Game AI 3.0 Research Questions}
 % % TODO: better name
-AI producers use the wealth of data being provided by the five forces driving recent developments in industry games for meeting the pressures imposed by these forces on developers. In each case these forces provide unique opportunities for data-driven approaches to game AI that enhance player experience through richer sources of information and emerging modes of game-related interaction. Rather than replace earlier waves of game AI, these five forces introduce novel opportunities to address concerns and enhance techniques from earlier waves.
+
+AI producers will use the wealth of data being generated as game developers strive to respond to the five forces driving recent developments in the games industry.
+% games for meeting the pressures imposed by these forces on developers. 
+In each case these forces provide unique opportunities for data-driven approaches to game AI that enhance player experience through richer sources of information and emerging modes of game-related interaction. Rather than replace earlier paradigms of game AI, these five forces introduce novel opportunities to address concerns and enhance techniques from earlier waves.
+%
+In the next sections, we revisit the forces and the research questions that accompany them.
 
 \subsection{Persistent Games}
 % % AI stretching to long-term AI-player relationships
 % % full user funnel (acquire, retain, re-aquire, refer)
 
-Persistent games shift from closed games comprising time investments typically on the order of days to ongoing and extended game experiences spanning months or years generating long-term data on player history and activities. AI producers meet these needs by addressing the full lifetime of a player, including the standard business concerns of acquiring new players, retaining players over a long period of time, and reacquiring lapsed players. Key research questions around using long-term data to improve player engagement focus on:(1) lifelong agents, (2) gameplay support, and (3) engagement-oriented content generation. Unifying these is a view of game AI providing for long-term player engagement across an increasingly diverse group of players.
+Persistent games shift from closed games comprising time investments typically on the order of days to ongoing and extended game experiences spanning months or years generating long-term data on player history and activities. AI producers can meet these needs by addressing the full lifetime of a player, including the standard business concerns of acquiring new players, retaining players over a long period of time, and reacquiring lapsed players. Key research questions around using long-term data to improve player engagement focus on: (1) lifelong agents, (2) gameplay support, and (3) engagement-oriented content generation. Unifying these is a view of game AI providing for long-term player engagement across an increasingly diverse group of players.
 
-\subsubsection{Lifelong Agents}
+\subsubsection{How can an NPC interact with players over very long periods?}
 % % [TODO: badly structured]
-Lifelong game agents are NPCs that learn about you as a player over time. Lifelong agents serve as long term companions (or adversaries) that acknowledge changes in players over time and use historical interactions with players to shift their behavior.
 
-% % [vignette about interactions? ``AI that knows my name'', chiding player, probing weaknesses]
+An agent that persists for months, years, or a over a user's lifetime is referred to as a {\em lifelong agent}. 
+In the context of computer games, lifelong agents are NPCs that learn about you as a player over time. 
+Lifelong agents serve as long term companions (or adversaries) that 
+%acknowledge
+recognize and adapt to  
+changes in players over time and use historical interactions with players to shift their behavior.
+That is, a lifelong agents get to know players, and become familiar with the player, and familiar to the player.
+%
+%% % [vignette about interactions? ``AI that knows my name'', chiding player, probing weaknesses]
 
-While relatively unexplored in the domain of games, lifelong agents and research in lifelong learning have become prevalent research areas in other contexts. Bickmore and company [REF] have explored the design and development of lifelong agents, examining ways thse agents can foster social and emotional interactions in settings including health care [REF] and museum guides [REF]. Particularly promising problems for game AI research involve fostering player empathy for companions---and enmity for rivals---or engaging users in social interactions with game world NPCs. In addition, adapting agent behaviors to foster long-term engagement stands as a key problem to the success of many online games that thrive on vibrant and stable communities of players.
+Lifelong agents are relatively unexplored in the domain of games.
+In the domain of virtual agents for healthcare, Bickmore and colleagues have been designing and developing agents that interface with humans longitudinally [REF]. 
+In the context of games, lifelong agents may foster player empathy for companions---and enmity for rivals---or engaging users in social interactions with game world NPCs. 
+In addition, adapting agent behaviors to foster long-term engagement stands as a key to the problem of many online games face in creating vibrant and stable communities of players.
 
-In machine learning the domain of lifelong learning investigates transferring knowledge between particular tasks, continually learning and refining knowledge, uncovering representations for complex information, and incorporating guidance or feedback from humans [good REF?]. For game AI these tasks manifest in terms of companions that work with players through a long series of open-ended (and possibly extending) tasks. As games now typically involve patches, expansions, downloadable content and other incremental updates research into how agents can adapt to these changes in a persistent game environment become increasingly valuable.
+%While relatively unexplored in the domain of games, lifelong agents and research in lifelong learning have become prevalent research areas in other contexts. Bickmore and company [REF] have explored the design and development of lifelong agents, examining ways thse agents can foster social and emotional interactions in settings including health care [REF] and museum guides [REF]. Particularly promising problems for game AI research involve fostering player empathy for companions---and enmity for rivals---or engaging users in social interactions with game world NPCs. In addition, adapting agent behaviors to foster long-term engagement stands as a key problem to the success of many online games that thrive on vibrant and stable communities of players.
 
-\subsubsection{Gameplay Support}
+%In machine learning the domain of lifelong learning investigates transferring knowledge between particular tasks, continually learning and refining knowledge, uncovering representations for complex information, and incorporating guidance or feedback from humans [good REF?]. For game AI these tasks manifest in terms of companions that work with players through a long series of open-ended (and possibly extending) tasks. As games now typically involve patches, expansions, downloadable content and other incremental updates research into how agents can adapt to these changes in a persistent game environment become increasingly valuable.
 
-Gameplay support agents act as mentors to players in order to help them remain engaged with a game. Players come to games with disparate sets of skills and gameplay mentors can help players overcome challenges that might otherwise cause them to quit playing a game. Gameplay support AI observes players, learns their gameplay strengths and weaknesses, and intervenes to provide players with appropriate hints, training materials, or content adjustments as needed. If a player shows an inability to counter a particular strategy in an RTS the AI would identify the missing player skills and could provide instruction about the appropriate response, training videos, or set up game scenarios to practice the requisite skill. 
+The key to lifelong agents in games may be algorithms that learn from interactions with individual players. \mytodo{player modeling?}
+Additionally, lifelong agents must be able to adapt to new content from patches, expansions, downloadable content, and other incremental updates to the game the agent inhabits.
+Research into machine learning for {\em lifelong learning} investigates the transfer of knowledge between particular tasks, continually learning and refining knowledge, uncovering representations for complex information, and incorporating guidance or feedback from humans. 
 
-Existing research in interactive tutoring systems, drama management, and dynamic difficulty adjustment relate to the needs for gameplay support AI. Interactive tutoring systems [REF?] are educational systems developed to help learners perform various tasks such as arithmetic [Nan Li], algebra [actr], or programming [REF?]. Applying interactive tutors to support long-term player engagement will require new techniques for representing player skills, modeling players based on their game activities, devising interventions to improve those skills, and appropriately adjusting those interventions in response to tutoring success or failure. 
 
-Drama (or experience) management [DM overviews (Mateas 1999, Roberts+Isbell, Riedl+Bulitko)] systems are disembodied virtual agents that monitor virtual worlds and intervene to drive a narrative forward based on models of player experience quality. Drama managers typically intervene by directing in-game agents or altering game world events. Research on drama managers emphasizes questions around balancing authorial control and player autonomy, the degree of game NPC autonomy compared to direction, and deciding when and how to best intervene in narratives for dramatic [REF], educational [REF: rowe/lester?], or entertainment purposes (e.g. in ``Left 4 Dead'' or ``Darkspore'') [REFs?]. Applying drama managers to game support entails better understanding how to train players while meeting all the above challenges. 
+\subsubsection{How can a game support longitudinal gameplay?}
+
+A key to persistent games is player retention.
+Gameplay support agents act as mentors to players in order to help them remain engaged with a game. Players come to games with disparate sets of skills and gameplay mentors can help players overcome challenges that might otherwise cause them to quit playing a game. Gameplay support AI observes players, learns their gameplay strengths and weaknesses, and intervenes to provide players with appropriate hints, training materials, or content adjustments as needed. 
+For example, if a player shows an inability to counter a particular strategy in an RTS the AI would identify the missing player skills and could provide instruction about the appropriate response, training videos, or set up game scenarios to practice the requisite skill. 
+
+%Existing research in Intelligent Tutoring Systems, drama management, and dynamic difficulty adjustment relate to the needs for gameplay support AI. Interactive tutoring systems [REF?] are educational systems developed to help learners perform various tasks such as arithmetic [Nan Li], algebra [actr], or programming [REF?]. Applying interactive tutors to support long-term player engagement will require new techniques for representing player skills, modeling players based on their game activities, devising interventions to improve those skills, and appropriately adjusting those interventions in response to tutoring success or failure. 
+
+Existing research in Intelligent Tutoring Systems \mytodo{ITS overview paper} presents one vision for gameplay support. 
+Applying interactive tutors to support long-term player engagement will require new techniques for representing player skills, modeling players based on their game activities, devising interventions to improve those skills, and appropriately adjusting those interventions in response to tutoring success or failure. 
+
+%Drama (or experience) management [DM overviews (Mateas 1999, Roberts+Isbell, Riedl+Bulitko)] systems are disembodied virtual agents that monitor virtual worlds and intervene to drive a narrative forward based on models of player experience quality. Drama managers typically intervene by directing in-game agents or altering game world events. Research on drama managers emphasizes questions around balancing authorial control and player autonomy, the degree of game NPC autonomy compared to direction, and deciding when and how to best intervene in narratives for dramatic [REF], educational [REF: rowe/lester?], or entertainment purposes (e.g. in ``Left 4 Dead'' or ``Darkspore'') [REFs?]. Applying drama managers to game support entails better understanding how to train players while meeting all the above challenges. 
+%
+%% (not sure where to put) Drama management has recently emerged in games in the form of AI directors made popular by ``Left 4 Dead''.
+
+Another technique for gameplay support might lie in {\em Dynamic Difficulty Adjustment} (DDA).
+Dynamic difficult adjustment systems make real-time adjustments to game parameters [REF], item placement [Hunicke], or other content to suit player abilities. 
+Typically framed in terms of Csikszentmihalyi's flow theory, DDA attempts to ensure players maintain has a desired level of performance in order to improve player engagement. 
+Techniques for DDA have involved classical cybernetic systems [REF: Hunicke], rule-based approaches [REF: van Lankveld], multi-agent systems [Pons], optimization of generator output from neuro-evolutionary [REF: Yannakakis/Shaker] or machine learning [REF: Yu, Zook?] systems, or logic programming on player execution [REF: Smith, Andersen]. Adapting these techniques for game support will require additional efforts to capture long-term effects of actions on player engagement and richer models of player skills related to various gameplay domains.
+
+\subsubsection{How does a game generate motivational content?}
+% % [needs better name]
+
+Content generation for long-term engagement must model player values, preferences, and motivations and generate content that continues player engagement over long periods of time.
+The goal is to encourage players to return to a game they may have lost interest in. 
+Whereas gameplay support addresses potential ``pain points'' of gameplay to prevent player dropout and improve acquisition of potential players, long-term motivational content generation focuses on how to best retain players once they have committed to a game or encourage players who have lapsed from a game to return. 
+These systems must emphasize player motivations, drawing from views of persuasive computing [REF: Fogg] to agents that encourage particular player behaviors. 
+
+Compared to previous work on content generation, motivational content generation should incentivize players to take advantage of aspects of a game they already enjoy or to explore new elements of a game they might not have encountered.
+% has goals of incentivizing players to take advantage of aspects of a game they already enjoy or to explore new elements of a game they might not have. 
+For example, generation of personalized achievements might encourage a player to try an alternative way of completing a mission or level.  
+Likewise, a system might generate mini-games within the context of a larger, persistent games based on the behaviors that a player might already favor.   
+%Personalized achievements can achieve these goals through modeling how players value different aspects of games and creating mini-games within a game to encourage particular player behaviors. 
+%An AI system might encourage players to try an alternative way of completing a FPS mission by creating a new achievement that incentivized competitive players to complete the mission within a strict time limit or incentivized more exploratory players to collect hidden or hard-to-find objects in the mission. 
+%Other kinds of content to motivate players no doubt exist: what these systems are, how to generate them, when to provide them, and what value they provide to players (potentially respecting concerns for fairness or equal experiences and opportunities) are all open research questions.
+Other forms of motivational content may exist: regardless, a system must leverage longitudinal data about the player to determine what content to create, when to create it, and what value the content will provide to different players. 
+
+Drama (or experience) managers [Riedl+Bulitko] systems are disembodied virtual agents that monitor virtual worlds and intervene to drive a narrative forward based on models of player experience quality.
+Simple drama managers implemented in {\em Left 4 Dead} and {\em Darkspore} have demonstrated the ability to increase game replay value by varying game content and modulating player intensity levels.
+Drama managers that procedurally generate narratives have been demonstrated in the context of short-term experiences.
+%The generation and management of potentially infinite dramas remains an open research question.
+\mytodo{Need: personalization from data [Yu], the ability to create a potentially infinite variety of narratives or quests [Albert], and chain narratives together to create persistent, coherent sense of progression.}
+%Drama managers typically intervene by directing in-game agents or altering game world events. Research on drama managers emphasizes questions around balancing authorial control and player autonomy, the degree of game NPC autonomy compared to direction, and deciding when and how to best intervene in narratives for dramatic [REF], educational [REF: rowe/lester?], or entertainment purposes (e.g. in ``Left 4 Dead'' or ``Darkspore'') [REFs?]. Applying drama managers to game support entails better understanding how to train players while meeting all the above challenges. 
 
 % (not sure where to put) Drama management has recently emerged in games in the form of AI directors made popular by ``Left 4 Dead''.
 
-Dynamic difficult adjustment (DDA) systems make real-time adjustments to game parameters [REF], item placement [Hunicke], or other content to suit player abilities. Typically framed in terms of Csikszentmihalyi's flow theory, DDA attempts to ensure players maintain has a desired level of performance in order to improve player engagement. Techniques for DDA have involved classical cybernetic systems [REF: Hunicke], rule-based approaches [REF: van Lankveld], multi-agent systems [Pons], optimization of generator output from neuro-evolutionary [REF: Yannakakis/Shaker] or machine learning [REF: Yu, Zook?] systems, or logic programming on player execution [REF: Smith, Andersen]. Adapting these techniques for game support will require additional efforts to capture long-term effects of actions on player engagement and richer models of player skills related to various gameplay domains.
-
-\subsubsection{Motivational Content Generation}
-% % [needs better name]
-Content generation for long-term engagement models player values, preferences, and motivations to generate content that continues player engagement over long periods of time and encourages players to return to a game they may have lost interest in. Game support AI addresses potential ``pain points'' of gameplay to prevent player dropout and improve acquisition of potential players. Long-term engagement content generation focuses on how to best retain players once they have made some level of commitment to a game or encourage players who have lapsed from a game to return. These systems emphasize player motivations, drawing from views of persuasive computing [REF: Fogg] to agents that encourage particular player behaviors. 
-
-Compared to previous work on content generation, long-term engagement has goals of incentivizing players to take advantage of aspects of a game they already enjoy or to explore new elements of a game they might not have. Personalized achievements can achieve these goals through modeling how players value different aspects of games and creating mini-games within a game to encourage particular player behaviors. An AI system might encourage players to try an alternative way of completing a FPS mission by creating a new achievement that incentivized competitive players to complete the mission within a strict time limit or incentivized more exploratory players to collect hidden or hard-to-find objects in the mission. Other kinds of content to motivate players no doubt exist: what these systems are, how to generate them, when to provide them, and what value they provide to players (potentially respecting concerns for fairness or equal experiences and opportunities) are all open research questions.
+%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Ecosystem of Games}
 % % AI concerned with players across multiple distinct games
 
-Ecosystems of games shift the focus from a player's experience within a single game to the experience players have across a host of games. Connecting characters and gameplay from a single player spanning multiple games opens new opportunities to interact with players rather than single-game characters, model and use generic player preferences for content and skills within games for personalization or content tailoring, and experiment with game designs online to build and generalize design knowledge across games. Previous efforts at player modeling and content generation can serve new roles in understanding how players interact with many distinct games, requiring advances in representing, collecting, and reasoning on game design knowledge.
+Focus on an ecosystem of games instead of individual titles shifts the emphasis from players' experiences within a single game to the experience of players' across a number of potentially unrelated games.
+%Ecosystems of games shift the focus from a player's experience within a single game to the experience players have across a host of games. 
+Connecting characters and gameplay from a single player spanning multiple games opens new opportunities to interact with players rather than single-game characters, model and use generic player preferences for content and skills within games for personalization or content tailoring, and experiment with game designs online to build and generalize design knowledge across games. Previous efforts at player modeling and content generation can serve new roles in understanding how players interact with many distinct games, requiring advances in representing, collecting, and reasoning on game design knowledge.
 
-\subsubsection{Cross-game Agents}
+\subsubsection{How can agents interact with players across games?}
+
+\mytodo{very long}
 Cross-game agents interact with users across multiple different games. Examples include recurring characters, guides, guardian angels, and rivals or long-term adversaries. Recurring characters maintain a stable persona across multiple games, contextualized to new settings in order to create a sense of persistence across games. Guides help players navigate a universe of game content, introduce or explain new games, and remind players about older games. Guardian angels and rivals are two sides to agents that act similar to long-term human playmates, encountering players across multiple games and making reference to experiences in other games. While guardian angels strive to help players in times of need, rivals aim to impede players or vie to outdo player achievements.
 
 Cross-game agents can draw from research on competitive cross-game AI and work on socially present agents. The general game playing competition has spawned a stream of research on methods to reason about logical representations of game state and rule systems to enable AI agents to play games of generic specification [REF]. Recent efforts have also explored methods for AI agents to play a diverse set of games by interfacing with emulated game systems [bellemare, new guy from CMU]. Applying general game playing research to the cross-game setting requires research on ways to serve cross-game goals for entertainment, rather than pure competition. Mapping NPC behavior to multiple settings is a key research challenge in this context. Representing and reasoning on semantic content---game story, setting, theme, and so on---will also be paramount to these developments.
