@@ -342,6 +342,7 @@
 % There should be no need to do such things with IEEEtran.cls V1.6 and later.
 % (Unless specifically asked to do so by the journal or conference you plan
 % to submit to, of course. )
+<<<<<<< HEAD
 %\usepackage{hyperref}
 \usepackage[backref]{hyperref} % to see how much/where references are used
 \usepackage{cite}
@@ -349,6 +350,16 @@
 \newcounter{questionno}
 \addtocounter{questionno}{1}
 
+=======
+\usepackage{hyperref}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\newcounter{questionno}
+\addtocounter{questionno}{1}
+
+>>>>>>> 38b41a2f62a60f6af6272ac8563459c1da9cb7a1
 
 \newcommand{\mytodo}[1]{\textbf{[[#1]]}}
 
@@ -522,7 +533,9 @@ Research in game AI can leverage this data in a new paradigm of data-driven game
 
 \section{Background: Three Paradigms of Game AI}
 
-In 2001, Laird and van Lent \cite{laird2001:gameai} put forth their seminal argument for AI in computer games as an academic pursuit. 
+%  [waves? metaphors? paradigms?]
+
+In 2001, Laird and van Lent \mytodo{cite} put forth their seminal argument for AI in computer games as an academic pursuit. 
 They specifically argued that the pursuit of ``human-level'' AI systems could use computer games as testbeds for research because games were intermediate environments between the toy domains researchers had been using and the full complexity of the real world.
 While this opened Game AI as an academic endeavor, the automation of various aspects of computer games has been a part of the industrial practice of creating commercial computer games since the beginning. 
 
@@ -552,26 +565,26 @@ AI served to analyze and visualize game data, model players within a game, gener
 
 A third use for artificial intelligence is now beginning to emerge wherein intelligent systems mediate between game producers and entire portfolios of games.  
 Producers concern themselves with the entire set of games and game content being made by a company, along with related aspects of managing player communities.
-Under this paradigm, AI should support the interaction of players and player communities over long spans of time and across multiple games, while bridging in-game and real-world systems and leveraging user-created content.
+Under this paradigm, AI should support the interaction of players and player communities over long spans of time, across multiple games, while bridging in-game and real-world systems and leveraging user-created content.
 
 In the next sections, we elaborate on what we see as three paradigms for the usage of artificial intelligence in games.
 It should be noted these three paradigms are not distinct phases, but overlapping sets of concerns and driving problems. 
 %Improvements in AI as game designers in turn supports new tools to mediate between a single game and users. Likewise, understanding users within an ecosystem of games leads to new problems for in-game NPC behavior.
 
 \subsection{Game AI 1.0: AI as Actor}
+% % [feels rather list-like...]
+% % [needs a metaphor: wave1=???, wave2=designer, wave3=producer]
 % % game <-AI-> user
 
 %\noindent
 %{\bf Game AI 1.0: AI as Actor}
 %
-The first paradigm of Game AI used a metaphor of AI as an actor---examining how AI can substitute for human players within a game. 
+The first paradigm of Game AI examined how AI can substitute for human players within a game. 
 Compared to non-game AI, game AI put a greater emphasis on creating engaging and entertaining experiences for users, 
 %rather than replicating exact human behavior.
 rather than maximizing a utility function such as score or win/loss rates. 
 %Competitive NPCs---such as Deep Blue and chess AI---emphasized techniques including alpha-beta search, heuristic reasoning, and compiling and leveraging gameplay database knowledge. Navigation, path-planning, and steering developed methods to author believable motions encoding design knowledge.  Reactive game NPCs employed techniques including state machines, fuzzy logic, decision trees, behavior trees, and most recently hierarchical task networks to aid authoring of character behaviors. More recently probabilistic and utility-based frameworks have come to the fore, along with a few but prominent examples of learning agents in games. Across these areas is the shared emphasis on optimizing for a player's experience within a game while meeting the tight constraints of running AI within a given game system.
 \mytodo{path planning, simple decision making (FSMs, Behavior Trees), sometimes even complex decision making (planning). What is cool 1.0 research? Starcraft?}
-
-\mytodo{starcraft competition, companion ai}
 
 
 \subsection{Game AI 2.0: AI as Designer}
@@ -582,14 +595,15 @@ rather than maximizing a utility function such as score or win/loss rates.
 %\noindent
 %{\bf Game AI 2.0: AI as Designer}
 %
-The second paradigm of game AI concerned itself with a metaphor of AI as a game designer. 
+The paradigm of game AI concerned itself with a metaphor of AI as a game designer. 
 Game designers are responsible for building and defining a game, analyzing how players interact with the game, and iteratively refining a game to achieve a design vision. 
  
-For AI designers the prominent challenges roughly align with {\em Procedural Content Generation (PCG)},
+For AI designers the prominent challenges roughly align with Procedural Content Generation (PCG),
 % to produce game content and game analytics to understand game content, with some exploring ways to fuse the two processes in a closed loop adaptation approach.
 which
 %Procedural content generation
-concerns itself with generating any and all components of games \cite{hendrikx2013:pcg, togelius2011:sbpcg, yannakakis2012:gameai-revisited}.
+concerns itself with generating any and all components of games \cite{hendrikx2013:pcg,togelius2011:sbpcg}. 
+\mytodo{cite Yannakakis' future of game AI paper?}
 %
 Offline content generation emphasizes producing content designers may curate or refine.
 The computer game industry has begun adopting offline content generation tools such as {\em Speedtree} for the purposes of increasing the efficiency of the game development process. 
@@ -598,21 +612,22 @@ Online, or just-in-time, generation focuses on providing larger amounts of varia
 %Generation techniques have a taken a variety of approaches including evolutionary algorithms [REFS], constraint solvers [Horswill, Smith], and planning [REFs: story gen?]. 
 A primary concern for these researchers has been (a) ways to appropriately represent game content to suit generation algorithms, while (b) providing means for users to interact with generation systems to author desired content and outcomes.
 %
+<<<<<<< HEAD
 As noted, the ``Game AI 2.0'' paradigm does not replace the 1.0 paradigm, but compliments it.
+=======
+As noted, ``Game AI 2.0'' paradigm does not replace the 1.0 paradigm, but compliments it.
+>>>>>>> 38b41a2f62a60f6af6272ac8563459c1da9cb7a1
 Historically, content generation in the form of level generation in games such as Rogue has been around nearly as long as 1.0 Game AI techniques. \mytodo{more?} 
 
-Another perspective on AI as designer is the use of AI in {\em interactive narratives}, a form of digital interactive experience in which users create or influence a dramatic storyline through their actions. AI approaches to interactive narrative involve dynamically manipulating the virtual world or  non-player characters in order to optimize players' experiences from a narrative standpoint \cite{mateas1999:oz-review-dm, roberts2008:dm-review, riedl2013:in-aimag}.
-
-{\em Game adaptation} combines content generation and player modeling to enable AI designers that tailor games to individual players. Game generation takes this adaptation process to its extreme by creating entire games driven by (real or simulated) feedback. Game adaptation emphasizes a closed loop of modeling player actions and adjusting game content based on design goals for player behavior \cite{smith2012:refraction}, player skill acquisition \cite{andersen2013:trace}, or maximizing player enjoyment \cite{yu2011:minboredom, shaker2010:platformer-gen}.
+{\em Game adaptation} combines content generation and player modeling to enable AI designers that tailor games to individual players. Game generation takes this adaptation process to its extreme by creating entire games driven by (real or simulated) feedback. Game adaptation emphasizes a closed loop of modeling player actions and adjust game content based on design goals for player behavior [REF: smith refraction, DM references], player skill acquisition [REF: andersen], or maximizing player enjoyment [Yu, Thue, Shaker].
 %, or preferences [Yu]. 
 %Prominent examples of game generation have explored the automatic generation of board games [REFs: Hom, Browne], platforming games [Cook], arcade games [Treanor, Nelson, Smith], and role-playing games [Zook?]. Across this research is a shared emphasis on encoding design knowledge both of game systems and design goals in a way that can be used to automatically adapt or create content.
 
-
+Another perspective on AI as designer is the use of AI in {\em interactive narratives}, a form of digital interactive experience in which users create or influence a dramatic storyline through their actions. AI approaches to interactive narrative involve dynamically manipulating the virtual world or  non-player characters in order to optimize players' experiences from a narrative standpoint \mytodo{cite Riedl AI Magazine}.
 
 The availability of large data sets is having an impact on those who see AI as designer.
-In particular, {\em game analytics} \cite{seifel-nasr2013:game-analytics-book} is the aggregation, understanding, and visualization of player behavior to support designer understanding. 
-Game data visualization \cite{wallner2013:gameplay-viz-analysis} focuses on designer understanding game systems to inform the design of game systems and AI agents. Player modeling research \cite{smith2011:playermodel} examines methods to describe and predict player behavior, potentially to be used by designers or automated AI systems in response. While not a traditional domain of game AI, player modeling has becoming increasingly prominent as AI agents shift to learning to adapt to players. Machine learning (e.g. \cite{harrison2011:wow-seq-pred, weber2011:playermodel}) and evolutionary computing \cite{yannakakis2011:edpcg} are the primary areas currently being employed to perform these modeling tasks.
-
+In particular, {\em game analytics} is the aggregation, understanding, and visualization of player behavior to support designer understanding. 
+Game data visualization [REFs] focuses on designer understanding game systems to inform the design of game systems and AI agents. Player modeling research [REFs] examines methods to describe and predict player behavior, potentially to be used by designers or automated AI systems in response. While not a traditional domain of game AI, player modeling has becoming increasingly prominent as AI agents shift to learning to adapt to players. Machine learning [REFs] and evolutionary computing [REFs] are the primary areas currently being employed to perform these modeling tasks.
 
 
 
@@ -621,7 +636,7 @@ Game data visualization \cite{wallner2013:gameplay-viz-analysis} focuses on desi
 
 The third paradigm of game AI uses a metaphor of AI as game producer. 
 In our metaphor, producers concern themselves with the entire set of games and game content being made by a company, along with related aspects of managing player communities. 
-AI producers mandate a shift from single player experiences within a closed game to extended player experiences within an open game, understanding a single player across multiple games, and understanding how multiple players interact as an in-game and out-of-game community. AI designers emphasized player models that captured the activity of a single user as a single character. AI producers require a shift to distinguishing characters (in-game characters or personas) from players (agents manipulating those characters). AI producers also leverage a broader sense of context for enhancing game experiences including the community of players, the real-world context of their activities, and the content they create for one another. Together, this research places a premium on broadening the scope of game AI to better integrate the increasingly pervasive nature of games into how games entertain and engage users. Games no longer are sharply bound by a single delivered product and game AI ought to respond by incorporating these newly opened borders for new research domains. Effectively responding to these challenges will require new methods to leverage the masses of data being produced by players to improve interactive experiences.
+AI producers mandate a shift from single player experiences within a closed game to extended player experiences within an open game, understanding a single player across multiple games, and understanding how multiple players interact as an out-of-game community. AI designers emphasized player models that captured the activity of a single user as a single character. AI producers require a shift to distinguishing characters (in-game characters or personas) from players (agents manipulating those characters). AI producers also leverage a broader sense of context for enhancing game experiences including the community of players, the real-world context of their activities, and the content they create for one another. Together, this research places a premium on broadening the scope of game AI to better integrate the increasingly pervasive nature of games into how games entertain and engage users. Games no longer are sharply bound by a single delivered product and game AI ought to respond by incorporating these newly opened borders for new research domains.
 
 \mytodo{Should emphasize data. We are kind of saying data comes with the new forces and it seems odd not to mention it again here.}
 
@@ -632,7 +647,7 @@ AI producers mandate a shift from single player experiences within a closed game
 
 AI producers will use the wealth of data being generated as game developers strive to respond to the five forces driving recent developments in the games industry.
 % games for meeting the pressures imposed by these forces on developers. 
-In each case these forces provide unique opportunities for data-driven approaches to game AI that enhance player experience through richer sources of information and emerging modes of game-related interaction. Rather than replace earlier paradigms of game AI, these five forces introduce novel opportunities to address concerns and enhance techniques from earlier paradigms.
+In each case these forces provide unique opportunities for data-driven approaches to game AI that enhance player experience through richer sources of information and emerging modes of game-related interaction. Rather than replace earlier paradigms of game AI, these five forces introduce novel opportunities to address concerns and enhance techniques from earlier waves.
 %
 In the next sections, we revisit the forces and the research questions that accompany them.
 
@@ -640,7 +655,7 @@ In the next sections, we revisit the forces and the research questions that acco
 % % AI stretching to long-term AI-player relationships
 % % full user funnel (acquire, retain, re-aquire, refer)
 
-Persistent games shift from closed games comprising time investments typically on the order of days to ongoing and extended game experiences spanning months or years that generate long-term data on player history and activities. AI producers can support long-term and ongoing game operations by addressing the full lifetime of a player, including the standard business concerns of acquiring new players, retaining players over a long period of time, and reacquiring lapsed players. Key research questions around using long-term data to improve player engagement focus on: (1) lifelong agents, (2) gameplay support, and (3) engagement-oriented content generation. Unifying these is a view of game AI providing for long-term player engagement across an increasingly diverse group of players.
+Persistent games shift from closed games comprising time investments typically on the order of days to ongoing and extended game experiences spanning months or years generating long-term data on player history and activities. AI producers can meet these needs by addressing the full lifetime of a player, including the standard business concerns of acquiring new players, retaining players over a long period of time, and reacquiring lapsed players. Key research questions around using long-term data to improve player engagement focus on: (1) lifelong agents, (2) gameplay support, and (3) engagement-oriented content generation. Unifying these is a view of game AI providing for long-term player engagement across an increasingly diverse group of players.
 
 \subsubsectionx{How can an AI agent interact with players over very long periods of time?}
 % % [TODO: badly structured]
@@ -657,17 +672,23 @@ That is, a lifelong agents get to know players, and become familiar with the pla
 
 Lifelong agents are relatively unexplored in the domain of games.
 In the domain of virtual agents for healthcare, Bickmore and colleagues have been designing and developing agents that interface with humans longitudinally [REF]. 
-In the context of games, lifelong agents may foster player empathy for companions---and enmity for rivals---or engage users in social interactions with game world NPCs. 
-In addition, adapting agent behaviors to foster long-term engagement can address the problems many online games face in creating vibrant and stable communities of players.
+In the context of games, lifelong agents may foster player empathy for companions---and enmity for rivals---or engaging users in social interactions with game world NPCs. 
+In addition, adapting agent behaviors to foster long-term engagement stands as a key to the problem of many online games face in creating vibrant and stable communities of players.
 
 %While relatively unexplored in the domain of games, lifelong agents and research in lifelong learning have become prevalent research areas in other contexts. Bickmore and company [REF] have explored the design and development of lifelong agents, examining ways thse agents can foster social and emotional interactions in settings including health care [REF] and museum guides [REF]. Particularly promising problems for game AI research involve fostering player empathy for companions---and enmity for rivals---or engaging users in social interactions with game world NPCs. In addition, adapting agent behaviors to foster long-term engagement stands as a key problem to the success of many online games that thrive on vibrant and stable communities of players.
 
 %In machine learning the domain of lifelong learning investigates transferring knowledge between particular tasks, continually learning and refining knowledge, uncovering representations for complex information, and incorporating guidance or feedback from humans [good REF?]. For game AI these tasks manifest in terms of companions that work with players through a long series of open-ended (and possibly extending) tasks. As games now typically involve patches, expansions, downloadable content and other incremental updates research into how agents can adapt to these changes in a persistent game environment become increasingly valuable.
 
+<<<<<<< HEAD
 A central challenge for lifelong agents will be adapting to games with continually evolving content. 
 Lifelong agents must be able to adjust to new content from patches, expansions, downloadable content, and other incremental updates to the game the agent inhabits.
 Research in {\em lifelong machine learning} investigates how agents can transfer knowledge between particular tasks, continually learn and refine knowledge, uncover representations for complex information, and incorporate guidance or feedback from humans \cite{silver2013:lifelong-ml}.
 Addressing these challenges in for game agents can provide enormous benefits to developers of live and ongoing games.
+=======
+The key to lifelong agents in games may be algorithms that learn from interactions with individual players. \mytodo{player modeling?}
+Additionally, lifelong agents must be able to adapt to new content from patches, expansions, downloadable content, and other incremental updates to the game the agent inhabits.
+Research into machine learning for {\em lifelong learning} investigates the transfer of knowledge between particular tasks, continually learning and refining knowledge, uncovering representations for complex information, and incorporating guidance or feedback from humans. 
+>>>>>>> 38b41a2f62a60f6af6272ac8563459c1da9cb7a1
 
 
 \subsubsectionx{How can a Game AI system support longitudinal gameplay?}
