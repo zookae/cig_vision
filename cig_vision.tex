@@ -534,7 +534,12 @@ The increasing diversity of game players has led to additional emphasis on ensur
 \begin{figure*}
 \centering
 \includegraphics[scale=0.7]{metaphor}
-\caption{Three paradigms of Game AI. The {\em AI as Actor} paradigm describes how AI mediates between the user and the game itself. The {\em AI as Designer} paradigm describes how AI mediates between a single game developer and the human-computer system of player and game. The {\em AI as Producer} is a new paradigm describing how AI mediates between producers and many systems of designers, users, and games.}
+%\caption{Three paradigms of Game AI. The {\em AI as Actor} paradigm describes how AI mediates between the user and the game itself. The {\em AI as Designer} paradigm describes how AI mediates between a single game developer and the human-computer system of player and game. The {\em AI as Producer} is a new paradigm describing how AI mediates between producers and many systems of designers, users, and games.}
+\caption{Three roles of Game AI and their human stakeholders.
+{\em AI as Actor} describes how AI mediates between the player and the game itself. 
+{\em AI as Designer} describes how AI mediates between a single game designer and the human-computer system of player and game. 
+{\em AI as Producer} is a new role describing how AI mediates between producers and many systems of designers, users, and games.
+}
 \label{fig:metaphor}
 \end{figure*}
 
@@ -569,7 +574,7 @@ While it is not necessarily the case that new research problems will require dat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Background: Three Paradigms of Game AI}
+\section{Background: Three Roles of Game AI}
 
 In 2001, Laird and van Lent \cite{laird2001:gameai} put forth their seminal argument for AI in computer games as an academic pursuit. 
 They specifically argued that the pursuit of ``human-level'' AI systems could use computer games as testbeds for research because games were intermediate environments between the toy domains researchers had been using and the full complexity of the real world.
@@ -591,17 +596,18 @@ As we go down this list, Game AI is charged with taking progressively more respo
 
 %In the next sections, we elaborate on what we see as three paradigms for the usage of artificial intelligence in games.
 %
-We group Game AI approaches into three broad paradigms based on the role the AI, CI, or ML takes in the creation and delivery of engaging entertainment experiences.
-The first paradigm is {\em AI as Actor}, in which the Game AI system mediates between the player and the game to create a compelling real time experience.
+We group Game AI approaches into three broad roles that AI, CI, or ML takes in the creation and delivery of engaging entertainment experiences.
+Each role targets a different stakeholder: players, designers, and producers.
+The first role is {\em AI as Actor}, in which the Game AI system mediates between the player and the game to create a compelling real time experience.
 The most common manifestation of AI under this paradigm is that of controlling or managing bots and non-player characters.
 %The most common role for AI in computer games is to mediate the user's experience with the game itself. 
 %We refer to this as the {\em AI as Actor} paradigm because this often requires the AI to take on the role of controlling or managing non-player characters (NPCs).
-Second, under {\em AI as Designer}, the AI mediates between a game designers and a single human-game system.
-Under this paradigm, AI systems might procedurally generate game content or adapt the game to particular players.
-Finally, we propose a third paradigm, {\em AI as Producer}, in which the AI mediates between game producers and a number of systems of players, designers, and games.
-Figure~\ref{fig:metaphor} shows how the different paradigms relate.
+The second role is {\em AI as Designer}, in which the AI mediates between a game designers and a single player-game system.
+Under this paradigm, AI systems might procedurally generate game content or adapt the game to particular players to scale the game development process.
+Finally, we propose a third role, {\em AI as Producer}, in which the AI mediates between game producers and a number of systems of players, designers, and games.
+Figure~\ref{fig:metaphor} shows how the different roles relate to each other and the three primary human stakeholders.
 %
-It should be noted these three paradigms are not distinct phases, but overlapping sets of concerns and driving problems, all of which need to be pursued individually or in unison.
+It should be noted these three roles are not distinct phases in the pursuit of Game AI, but overlapping sets of concerns and driving problems, all of which need to be pursued individually or in unison.
 %At no point are we suggesting that one perspective on Game AI has been replaced by another or that future Game AI researchers should abandon their valuable contributions to work on new research questions.
 
 %Data-driven game AI leads to a shift in the role of AI in game design and development. Historically, game AI has seen a shift between two waves of research. 
@@ -642,13 +648,13 @@ Compared to non-Game AI, the intelligence built into games places a greater emph
 rather than maximizing a utility function such as score or win/loss rates. 
 %Competitive NPCs---such as Deep Blue and chess AI---emphasized techniques including alpha-beta search, heuristic reasoning, and compiling and leveraging gameplay database knowledge. Navigation, path-planning, and steering developed methods to author believable motions encoding design knowledge.  Reactive game NPCs employed techniques including state machines, fuzzy logic, decision trees, behavior trees, and most recently hierarchical task networks to aid authoring of character behaviors. More recently probabilistic and utility-based frameworks have come to the fore, along with a few but prominent examples of learning agents in games. Across these areas is the shared emphasis on optimizing for a player's experience within a game while meeting the tight constraints of running AI within a given game system.
 
-Problems addressed under this Game AI paradigm largely fall into the categories of non-player character (NPC) path planning and decision making.
+For the AI as Actor role, problems addressed largely fall into the categories of non-player character (NPC) path planning and decision making.
 The decision making of game agents places emphasis on the believability of characters to support the suspension of disbelief that the player is interacting with software instead of a monster, human opponent, or human companion.
 These problems are still being pursued by industry developers and academic researchers.
 %\mytodo{path planning, simple decision making (FSMs, Behavior Trees), sometimes even complex decision making (planning). What is cool 1.0 research? Starcraft?}
 
 {\em Drama management} is another way for AI to mediate between users and the NPCs and other aspects of a game or virtual world \cite{mateas1999:oz-review-dm, roberts2008:dm-review, riedl2013:in-aimag}. 
-A drama manager is an omniscient agent responsible for delivering an enjoyable and coherent narrative experience to players, much in the way that a ``Dungeon Master'' does the same for tabletop role playing games.
+A drama manager is an omniscient agent responsible for delivering an enjoyable and coherent narrative experience to players, much as a ``Dungeon Master'' does the same for tabletop role playing games.
 %Another perspective on AI as designer is the use of AI in {\em interactive narratives}, a form of digital interactive experience in which users create or influence a dramatic storyline through their actions. AI approaches to interactive narrative involve dynamically manipulating the virtual world or non-player characters in order to optimize players' experiences from a narrative standpoint \cite{mateas1999:oz-review-dm, roberts2008:dm-review, riedl2013:in-aimag}.
 
 \subsection{Artificial Intelligence as Designer}
@@ -659,8 +665,9 @@ A drama manager is an omniscient agent responsible for delivering an enjoyable a
 %\noindent
 %{\bf Game AI 2.0: AI as Designer}
 %
-The second paradigm of Game AI concerns itself with a metaphor of AI as a game designer. 
-Game designers are responsible for building and defining a game, analyzing how players interact with the game, and iteratively refining a game to achieve a design vision. 
+The second role of Game AI is to mediate between the human designer (or developer) and the human-computer system comprised of game and player.  
+%concerns itself with a metaphor of AI as a game designer. 
+In our metaphor, game designers are responsible for building and defining a game, analyzing how players interact with the game, and iteratively refining a game to achieve a design vision. 
 %
 This paradigm for artificial intelligence is often referred to as {\em Procedural Content Generation} (PCG)---algorithms and representations for generating any and all components of games \cite{hendrikx2013:pcg, togelius2011:sbpcg, yannakakis2012:gameai-revisited}.
 % 
@@ -704,7 +711,7 @@ Player modeling research examines methods to describe and predict player behavio
 %\subsection{Game AI 3.0: AI as Producer}
 % % ((game <-> user) <-> designer) <-AI-> producer/business
 
-The third paradigm of Game AI uses a metaphor of AI as game producer. 
+The third role of Game AI leverages a metaphor of AI as game producer. 
 In our metaphor, producers concern themselves with the entire set of games and game content being made by a company, along with related aspects of managing player communities. 
 AI Producers mandate a shift from single player experiences within a closed game to extended player experiences within an open game, understanding a single player across multiple games, and understanding how multiple players interact as an in-game and out-of-game community. 
 Whereas AI designers emphasized player models that captured the activity of a single user as a single character. AI Producers require a shift to distinguishing characters (in-game characters or personas) from players (agents manipulating those characters). 
@@ -724,7 +731,9 @@ AI producers will use the wealth of data being generated to meet the needs impos
 %as game developers strive to respond to the four forces driving recent developments in the games industry.
 % games for meeting the pressures imposed by these forces on developers. 
 In each case these forces provide unique opportunities for data-driven approaches to Game AI that enhance player experience through richer sources of information and emerging modes of game-related interaction. 
-Rather than replace earlier paradigms of Game AI, these five forces introduce novel opportunities to address concerns and enhance techniques from earlier paradigms.
+Rather than replace earlier roles and stakeholders of Game AI, we assert that the new role of AI as Producer must emerge to address the novel concerns raised by the four forces.
+% introduce novel opportunities to address concerns and enhance techniques from earlier roles.
+This new role for Game AI enhances and extends the AI techniques defined from earlier roles.
 %
 In the next sections, we revisit the forces and the research questions that accompany them.
 
@@ -762,7 +771,7 @@ in the form of
 %Lifelong agents must be able to adjust to new content from 
 patches, expansions, downloadable content, and other incremental updates to the game the agent inhabits.
 Research in {\em lifelong machine learning} investigates how agents can transfer knowledge between particular tasks, continually learn and refine knowledge, uncover representations for complex information, and incorporate guidance or feedback from humans \cite{silver2013:lifelong-ml}.
-Addressing these challenges in for game agents can provide enormous benefits to developers of live and ongoing games.
+Addressing these challenges for game agents can provide enormous benefits to developers of live and ongoing games.
 
 
 \subsubsectionx{How can a Game AI system support deep gameplay?}
@@ -1162,8 +1171,9 @@ AI Designers have supported and augmented the development of individual games th
 We envision AI Producers taking on a new role of augmenting and scaling the entire game production pipeline, supporting the entire span of live operations in games, enhancing cross-game interoperations, supporting the emergence of strong player communities, and coupling real and virtual contexts.
 This vision is bolstered by the massive amounts of data being generated and collected by the game development industry.
 
-The twelve new Game AI research questions we present in this paper require a new paradigm of Game AI as Producer.
-This paradigm does not supplant or replace existing research challenges or perspectives on Game AI, but enhances the scope and range of relevance of the field of Game AI as a whole.
+The twelve new Game AI research questions we present in this paper require game developers to see Game AI as taking on a new role and involving a new stakeholder not previously considered.
+%a new paradigm of Game AI as Producer.
+This role of AI as Producer does not supplant or replace existing research challenges or perspectives on Game AI, but enhances the scope and range of relevance of the field of Game AI as a whole.
 In light of the shifting landscape of the computer game industry, addressing these research questions with credible AI solutions will result in immediate relevance to game developers and may present a new vector for industry game development and academic Game AI research collaboration. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
