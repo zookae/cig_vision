@@ -477,7 +477,7 @@ Players are more diverse, have access to games in more places and at more times,
 \end{enumerate}
 \noindent
 Some of these forces have been around for a number of years, while others are just beginning to emerge.
-The consequence of these forces is a profound opportunity for Artificial Intelligence, Computational Intelligence, and Machine Learning in games (collectively referred to as {\em Game AI}) to play an even greater role in the development of computer games and the delivery of engaging real-time experiences to players. 
+The consequence of these forces is a profound opportunity for Artificial Intelligence (AI), Computational Intelligence (CI), and Machine Learning (ML) in games (collectively referred to as {\em Game AI}) to play an even greater role in the development of computer games and the delivery of engaging real-time experiences to players. 
 
 Through these forces we see an opportunity for Game AI to address new research questions that have the potential to dramatically impact game development practices.
 %
@@ -511,18 +511,24 @@ We will enumerate 12 novel research questions that arise when considering the ro
 
 \section{The Shifting Landscape of Game Development}
 
-In this section, we enumerate some of the prominent new forces that are shaping the way that computer game development companies create games. Many of these forces have arisen as a confluence of advances in computing technology and market forces that result from a maturation of the computer game industry.
+In this section, we enumerate some of the prominent new forces that are shaping the way that computer game development companies create games. 
+Many of these forces have arisen as a confluence of advances in computing technology and market forces that result from a maturation of the computer game industry.
 
 %\begin{description}
 %\item[\textbf{persistent games}] \hfill \\ 
 %{\bf Persistent Games}
 \subsubsection{Persistent Games} 
-The rise of Massively Multiplayer Online Games (MMOGs), social games, and long-term or recurring game experiences has led to long-term data on players within games. Many games have players join, play over long periods of time, and potentially rejoin at later times. Developers are increasingly pressed to develop content that provides for long-term engagement with a game, rather than a closed experience with clear beginning and end.
+The rise of Massively Multiplayer Online Games (MMOGs), social games, and long-term or recurring game experiences has led to long-term data on players within games. 
+Many games have players join, play over long periods of time, and potentially rejoin at later times. 
+Developers are increasingly pressed to develop content that provides long-term engagement with a game, rather than a closed experience with clear beginning and end.
 
 %\item[\textbf{ecosystem of games}] \hfill \\ 
 %{\bf Ecosystem of Games}
 \subsubsection{Ecosystem of Games}
-Developers have a wider variety of tools to build games and lowered barriers to distributing games to new users. Together this has led to a greater emphasis on keeping players engaged within an ecosystem of games from a single developer, rather than focusing on experiences only within one game. Developers are increasingly driven to provide new content of multiple kinds that engages players across games. The increasing diversity of game players has led to additional emphasis on ensuring a portfolio of games provides a diverse range of experiences, rather than create a kind of experience within a single game.
+Developers have a wider variety of tools to build games and lowered barriers to distributing games to new users. 
+Together this has led to a greater emphasis on keeping players engaged within an ecosystem of games from a single developer, rather than focusing on experiences only within one game. 
+Developers are increasingly driven to provide new content of multiple kinds that engages players across games. 
+The increasing diversity of game players has led to additional emphasis on ensuring a portfolio of games provides a diverse range of experiences, rather than create a kind of experience within a single game.
 
 \begin{figure*}
 \centering
@@ -534,14 +540,17 @@ Developers have a wider variety of tools to build games and lowered barriers to 
 %\item[\textbf{community}] \hfill \\ 
 %{\bf Player Communities}
 \subsubsection{Player Communities}
-Player communities around games have emerged as a major driving force for the success (and failure) of games. Continuing to engage with communities, providing support for players to socialize within the community, and managing the ways players impact one another's experiences (positively and negatively) are all increasingly pressing concerns.
-
+Player communities around games have emerged as a major driving force for the success (and failure) of games. 
+Continuing to engage with communities, support players socializing within the community, managing the ways players impact one another's experiences (positively and negatively), and leveraging user-generated content are all increasingly pressing concerns.
 
 
 %\item[\textbf{real-virtual coupling}] \hfill \\ 
 %{\bf Coupling of Real and Virtual Worlds}
 \subsubsection{Coupling of Real and Virtual Worlds}
-Games are connecting to the real world in new and more widely used ways. Sensing systems ranging from the Kinect and Wiimote to mobile phone GPS provide more data on players' real-world environment. Output modalities from second screen experiences and mobile phone augmented reality to virtual reality are emerging as new ways to view game content. At the same time these technologies have introduced a host of challenges around how games can interface with and leverage this real-world context and respond to more unstructured forms of information.
+Games are connecting to the real world in new and more widely used ways. 
+Sensing systems ranging from the Kinect and Wiimote to mobile phone GPS provide more data on players' real-world environment. 
+Output modalities from second screen experiences and mobile phone augmented reality to virtual reality are emerging as new ways to view game content. 
+At the same time these technologies have introduced a host of challenges around how games can interface with and leverage this real-world context and respond to more unstructured forms of information.
 
 %%\item[\textbf{user-generated content}] \hfill \\ 
 %{\bf User-Generated Content}
@@ -552,7 +561,7 @@ Games are connecting to the real world in new and more widely used ways. Sensing
 
 Each of these forces presents new opportunities to solve problems of real-world applicability to game developers.
 A side effect of each of these forces is the massive amounts of data being generated about game players.
-While it is not necessarily the case that new research problems will require data-driven artificial intelligence, computational intelligence, and machine learning techniques, we see this data as a tool for tackling real-world game development problems.
+While it is not necessarily the case that new research problems will require data-driven AI, CI, and ML techniques, we see this data as a tool for tackling real-world game development problems.
 %Each of these forces provides massive amounts of data to game developers. 
 %Research in game AI can leverage this data in a new paradigm of data-driven game AI focused on how to use these sources of data to address novel research questions that emerge within these domains. [weak statement, want something stronger about need to respond]
 
@@ -560,8 +569,6 @@ While it is not necessarily the case that new research problems will require dat
 
 
 \section{Background: Three Paradigms of Game AI}
-
-%  [waves? metaphors? paradigms?]
 
 In 2001, Laird and van Lent \cite{laird2001:gameai} put forth their seminal argument for AI in computer games as an academic pursuit. 
 They specifically argued that the pursuit of ``human-level'' AI systems could use computer games as testbeds for research because games were intermediate environments between the toy domains researchers had been using and the full complexity of the real world.
@@ -634,12 +641,12 @@ Compared to non-Game AI, the intelligence built into games places a greater emph
 rather than maximizing a utility function such as score or win/loss rates. 
 %Competitive NPCs---such as Deep Blue and chess AI---emphasized techniques including alpha-beta search, heuristic reasoning, and compiling and leveraging gameplay database knowledge. Navigation, path-planning, and steering developed methods to author believable motions encoding design knowledge.  Reactive game NPCs employed techniques including state machines, fuzzy logic, decision trees, behavior trees, and most recently hierarchical task networks to aid authoring of character behaviors. More recently probabilistic and utility-based frameworks have come to the fore, along with a few but prominent examples of learning agents in games. Across these areas is the shared emphasis on optimizing for a player's experience within a game while meeting the tight constraints of running AI within a given game system.
 
-Problems that are addressed under this Game AI paradigm largely fall into the categories of non-player character (NPC) path planning and decision making.
+Problems addressed under this Game AI paradigm largely fall into the categories of non-player character (NPC) path planning and decision making.
 The decision making of game agents places emphasis on the believability of characters to support the suspension of disbelief that the player is interacting with software instead of a monster, human opponent, or human companion.
 These problems are still being pursued by industry developers and academic researchers.
 %\mytodo{path planning, simple decision making (FSMs, Behavior Trees), sometimes even complex decision making (planning). What is cool 1.0 research? Starcraft?}
 
-{\em Drama management} is another way for artificial intelligence to mediate between users and the NPCs and other aspects of a game or virtual world \cite{mateas1999:oz-review-dm, roberts2008:dm-review, riedl2013:in-aimag}. 
+{\em Drama management} is another way for AI to mediate between users and the NPCs and other aspects of a game or virtual world \cite{mateas1999:oz-review-dm, roberts2008:dm-review, riedl2013:in-aimag}. 
 A drama manager is an omniscient agent responsible for delivering an enjoyable and coherent narrative experience to players, much in the way that a ``Dungeon Master'' does the same for tabletop role playing games.
 %Another perspective on AI as designer is the use of AI in {\em interactive narratives}, a form of digital interactive experience in which users create or influence a dramatic storyline through their actions. AI approaches to interactive narrative involve dynamically manipulating the virtual world or non-player characters in order to optimize players' experiences from a narrative standpoint \cite{mateas1999:oz-review-dm, roberts2008:dm-review, riedl2013:in-aimag}.
 
@@ -672,7 +679,7 @@ A primary concern for PCG researchers has been (a) ways to appropriately represe
 {\em Game adaptation} combines content generation and player modeling to enable AI designers to tailor games to individual players, emphasizing a closed loop of modeling player actions and automated adjustment of game content based on design goals for player behavior \cite{smith2012:refraction}, player skill acquisition \cite{andersen2013:trace}, or maximizing player enjoyment \cite{yu2012:prefix-based, thue2007:storytell-pm, shaker2010:platformer-gen}.
 %
 %Personalization of game content---{\em game adaptation}---emphasizes a closed loop of player modeling and automatic adjustment of game content while preserving design goals \cite{smith2012:refraction,yu2012:prefix-based, thue2007:storytell-pm, shaker2010:platformer-gen}.
-Game adaptation taken to its extreme introduce the problem of {\em game generation}, which looks at automatic creation of entire games driven by (real or simulated) player feedback.
+Game adaptation taken to its extreme introduces the problem of {\em game generation}---the automatic creation of entire games driven by (real or simulated) player feedback.
 
 The availability of large data sets is having an impact on those who see AI as designer.
 In particular, {\em game analytics} is the aggregation, understanding, and visualization of player behavior to support designer understanding \cite{seifel-nasr2013:game-analytics-book}. 
@@ -760,9 +767,10 @@ Addressing these challenges in for game agents can provide enormous benefits to 
 \subsubsectionx{How can a Game AI system support deep gameplay?}
 % % AZ: I've renamed a bit to make clear the emphasis is on skills, not engagement. "longitudinal" seemed potenentially confusing, although I'm not married to "deep"
 A key to persistent games is player retention.
-Many contemporary games have high ceilings for player skills to build up to---through complex underlying systems or ever-evolving multiplayer competitions---but lose players early in the game, especially those with more diverse backgrounds and skills.
+Many contemporary games have high ceilings for player skills to build up to---through complex underlying systems or ever-evolving multiplayer competitions. 
+However, complex games often lose players early in the game, especially as players have more diverse backgrounds and skills.
 % due to the disparate skills players bring to games.
-Gameplay support agents act as mentors to players in order to help them remain engaged with a game by helping players overcome challenges that might otherwise cause them to quit playing a game. 
+Gameplay support agents act as mentors to players to help them overcome challenges that might otherwise cause them to quit playing a game. 
 Gameplay support AI observes players, learns their gameplay strengths and weaknesses, and intervenes to provide players with appropriate hints, training materials, or content adjustments as needed. 
 For example, if a player shows an inability to counter a particular strategy in an RTS the AI would identify the missing player skills and could provide instruction about the appropriate response, training video demonstrations, or set up game scenarios to practice the requisite skill. 
 At the extreme a gameplay support agent could coach players through climbing their way to the top of multiplayer competition.
