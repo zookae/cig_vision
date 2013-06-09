@@ -342,8 +342,8 @@
 % There should be no need to do such things with IEEEtran.cls V1.6 and later.
 % (Unless specifically asked to do so by the journal or conference you plan
 % to submit to, of course. )
-%\usepackage{hyperref}
-\usepackage[backref]{hyperref} % to see how much/where references are used
+\usepackage{hyperref}
+%\usepackage[backref]{hyperref} % to see how much/where references are used
 \usepackage{cite}
 
 
@@ -550,18 +550,18 @@ The growing diversity of game players has led to additional emphasis on ensuring
 %\item[\textbf{community}] \hfill \\ 
 %{\bf Player Communities}
 \subsubsection{Player Communities}
-Player communities around games have emerged as a major driving force for the success (and failure) of games. 
+Player communities have emerged as a major driving force for the success (and failure) of games. 
 Players generate a mass of content from reviews and walkthoughs through add-ons and full game modifications.
-Continuing to engage with communities, support players socializing within the community, manage the ways players impact one another's experiences (positively and negatively), and leverage user-generated content are all increasingly pressing concerns.
+Continually engaging communities, supporting player socializing within the community, managing how players impact ones another's experiences (positively and negatively), and leveraging user-generated content are growing concerns.
 
 
 %\item[\textbf{real-virtual coupling}] \hfill \\ 
 %{\bf Coupling of Real and Virtual Worlds}
 \subsubsection{Coupling of Real and Virtual Worlds}
-Games are connecting to the real world in new and more widely used ways. 
-Sensing systems ranging from the Kinect and Wiimote to mobile phone GPS provide more data on players' real-world environment. 
+Games are more widely adopting ways to connect to the real world. 
+Sensing systems from the Kinect and Wiimote to mobile phone GPS provide more data on players' real-world environment. 
 Output modalities from second screen experiences and mobile phone augmented reality to virtual reality are emerging as new ways to view game content. 
-At the same time these technologies have introduced a host of challenges around how games can interface with and leverage this real-world context and respond to more unstructured forms of information.
+At the same time these technologies have introduced a host of challenges around how games can interface with and use this real-world context and respond to more unstructured types of information.
 
 %%\item[\textbf{user-generated content}] \hfill \\ 
 %{\bf User-Generated Content}
@@ -614,11 +614,11 @@ Figure~\ref{fig:metaphor} shows how the different roles relate to each other and
 
 
 % % AZ [6.9.2013]: I want to be careful not to be dismissive of earlier work but to emphasize that we're trying to capture new issues that are covered by other paradigms. I've tried to do so by shifting the emphasis from the AI roles to the AI goal. I think the metaphor can be useful but I do agree with Adam's comments to the extent that the AI roles are a red herring compared to the AI tasks (designing a game vs producing a live game and managing full ecosystem).
-It should be noted these three roles are not distinct phases in the pursuit of Game AI, but overlapping sets of concerns and driving problems, all of which need to be pursued individually or in unison.
+These three roles are not distinct phases in the pursuit of Game AI, but overlapping sets of concerns and driving problems, all of which need to be pursued individually or in unison.
 %At no point are we suggesting that one perspective on Game AI has been replaced by another or that future Game AI researchers should abandon their valuable contributions to work on new research questions.
-We see AI Producers as a super-set of AI Designers, encompassing a broader set of concerns. 
+We see AI Producers as a superset of AI Designers, encompassing a broader set of research questions. 
 Equivalently, we see this as a shift from Game AI for game design to Game AI for game production. 
-In industry the differences between designers and producers have blurred as technical barriers to content production have lowered and gameplay and business (e.g. monetization and viral marketing) have become more tightly coupled.
+In industry the differences between designers and producers have blurred as technical barriers to content production have lowered and gameplay and business (e.g. monetization and viral marketing) are more tightly coupled.
 
 %Data-driven game AI leads to a shift in the role of AI in game design and development. Historically, game AI has seen a shift between two waves of research. 
 %``Classical'' game AI developed systems to mediate the role of AI between users and a game (Figure X). AI served the role of an artificial human opponent or playmate, enabling play without requiring other people or filling roles humans would be loathe to fill in a game. The second wave of game AI shifted to developing AI systems that mediate between designers and the coupled user-game systems they develop. AI served to analyze and visualize game data, model players within a game, generate game content, and even potentially adapt game content by fusing modeling and generation. The third wave of game AI that is emerging demands a further step back to study how AI can mediate between game producers and their portfolio of games. AI should support interacting with players and player communities over long spans of time, across multiple games, while bridging in-game and real-world systems and leveraging user-created content.
@@ -658,7 +658,8 @@ Compared to non-Game AI, the intelligence built into games places a greater emph
 rather than maximizing a utility function such as score or win/loss rates. 
 %Competitive NPCs---such as Deep Blue and chess AI---emphasized techniques including alpha-beta search, heuristic reasoning, and compiling and leveraging gameplay database knowledge. Navigation, path-planning, and steering developed methods to author believable motions encoding design knowledge.  Reactive game NPCs employed techniques including state machines, fuzzy logic, decision trees, behavior trees, and most recently hierarchical task networks to aid authoring of character behaviors. More recently probabilistic and utility-based frameworks have come to the fore, along with a few but prominent examples of learning agents in games. Across these areas is the shared emphasis on optimizing for a player's experience within a game while meeting the tight constraints of running AI within a given game system.
 
-For the AI as Actor role, problems largely fall into the categories of non-player character (NPC) path planning and decision making.
+For the AI as Actor role, research has focused on non-player character (NPC) path planning and decision making.
+%problems largely fall into the categories of non-player character (NPC) path planning and decision making.
 Game agent decision making emphasizes the believability of characters to support the suspension of disbelief that the player is interacting with software instead of a monster, human opponent, or human companion.
 These problems are still being pursued by industry developers and academic researchers.
 %\mytodo{path planning, simple decision making (FSMs, Behavior Trees), sometimes even complex decision making (planning). What is cool 1.0 research? Starcraft?}
@@ -757,7 +758,7 @@ In the next sections, we revisit the forces and the research questions that acco
 % % full user funnel (acquire, retain, re-aquire, refer)
 
 Persistent games shift from closed games comprising time investments typically on the order of days to ongoing and extended game experiences spanning months or years generating long-term data on player history and activities. 
-AI Producers can meet these needs by addressing the full lifetime of a player, including the standard business concerns of acquiring new players, retaining players over a long period of time, and reacquiring lapsed players. 
+AI Producers address the full lifetime of a player, spanning the standard business concerns of acquiring new players, retaining players over a long period of time, and reacquiring lapsed players. 
 Key research questions around using long-term data to improve player engagement focus on: lifelong agents, gameplay support, and engagement-oriented content generation. 
 Unifying these is a view of Game AI providing for long-term player engagement across an increasingly diverse group of players.
 
@@ -792,6 +793,7 @@ Addressing these challenges for game agents can provide enormous benefits to dev
 
 \subsubsectionx{How can a Game AI system support deep gameplay?}
 % % AZ: I've renamed a bit to make clear the emphasis is on skills, not engagement. "longitudinal" seemed potenentially confusing, although I'm not married to "deep"
+%
 A key to persistent games is player retention.
 Many contemporary games have high ceilings for player skills to build up to---through complex underlying systems or ever-evolving multiplayer competition. 
 However, complex games often lose players early in the game, especially as players increasingly have more diverse backgrounds and skills.
@@ -803,9 +805,9 @@ At the extreme a gameplay support agent could coach players to climb their way t
 
 %Existing research in Intelligent Tutoring Systems, drama management, and dynamic difficulty adjustment relate to the needs for gameplay support AI. Interactive tutoring systems [REF?] are educational systems developed to help learners perform various tasks such as arithmetic [Nan Li], algebra [actr], or programming [REF?]. Applying interactive tutors to support long-term player engagement will require new techniques for representing player skills, modeling players based on their game activities, devising interventions to improve those skills, and appropriately adjusting those interventions in response to tutoring success or failure. 
 
-Existing research in Intelligent Tutoring Systems \cite{vanlehn2006:behav-its} presents one vision for gameplay support. 
-Applying interactive tutors to support long-term player engagement will require new techniques for representing player skills, modeling players based on their game activities, devising interventions to improve those skills, and appropriately adjusting those interventions in response to tutoring success or failure. 
-Ultimately gameplay support systems should aspire to automatically generate tutorials---for introducing new content through coaching players along difficult missions---based on game features and gameplay data. 
+Intelligent Tutoring Systems \cite{vanlehn2006:behav-its} present one vision for gameplay support. 
+Applying interactive tutors to support long-term player engagement will need advances in representing player skills, modeling players based on their game activities, devising interventions to improve those skills, and adjusting those interventions in response to tutoring success or failure. 
+Ultimately, gameplay support systems should aspire to automatically generate tutorials---for introducing new content through coaching players along difficult missions---based on game features and gameplay data. 
 Extracting examples appropriate to demonstrate skills from gameplay data, recognizing player skills, and choosing appropriate timing and presentation style for tutorial information are all key challenges to apply gameplay data toward automated game tutoring.
 
 %Drama (or experience) management [DM overviews (Mateas 1999, Roberts+Isbell, Riedl+Bulitko)] systems are disembodied virtual agents that monitor virtual worlds and intervene to drive a narrative forward based on models of player experience quality. Drama managers typically intervene by directing in-game agents or altering game world events. Research on drama managers emphasizes questions around balancing authorial control and player autonomy, the degree of game NPC autonomy compared to direction, and deciding when and how to best intervene in narratives for dramatic [REF], educational [REF: rowe/lester?], or entertainment purposes (e.g. in ``Left 4 Dead'' or ``Darkspore'') [REFs?]. Applying drama managers to game support entails better understanding how to train players while meeting all the above challenges. 
@@ -834,15 +836,16 @@ Whereas gameplay support addresses potential ``pain points'' of gameplay to prev
 
 Compared to previous work on content generation, motivational content generation should incentivize players to take advantage of aspects of a game they already enjoy or to explore new elements of a game they might not have encountered.
 % has goals of incentivizing players to take advantage of aspects of a game they already enjoy or to explore new elements of a game they might not have. 
-For example, generation of personalized achievements might encourage a player to try an alternative way of completing a mission or level.  
-Likewise, a system might generate mini-games within the context of a larger, persistent games based on the behaviors that a player might already favor.   
+For example, generation of personalized achievements can encourage players to try alternative ways to complete a mission or level.  
+Likewise, a system might generate mini-games within the context of a larger, persistent games based on the behaviors that a player already favors.   
 %Personalized achievements can achieve these goals through modeling how players value different aspects of games and creating mini-games within a game to encourage particular player behaviors. 
 %An AI system might encourage players to try an alternative way of completing a FPS mission by creating a new achievement that incentivized competitive players to complete the mission within a strict time limit or incentivized more exploratory players to collect hidden or hard-to-find objects in the mission. 
 %Other kinds of content to motivate players no doubt exist: what these systems are, how to generate them, when to provide them, and what value they provide to players (potentially respecting concerns for fairness or equal experiences and opportunities) are all open research questions.
 Other forms of motivational content may exist. 
 Regardless, a system must use longitudinal player data to determine what content to create, when to create it, and what value the content will provide to different players. 
 
-Drama (or experience) managers are disembodied virtual agents that monitor virtual worlds and intervene to drive a narrative forward based on models of player experience quality \cite{riedl2013:in-aimag}.
+Drama %(or experience) 
+managers are disembodied virtual agents that monitor virtual worlds and intervene to drive a narrative forward based on models of player experience quality \cite{riedl2013:in-aimag}.
 Drama managers implemented in {\em Left 4 Dead} and {\em Darkspore} have demonstrated the ability to increase game replay value by varying game content and modulating player intensity levels.
 Drama managers that procedurally generate narratives have been demonstrated in the context of short-term experiences.
 % % AZ: needs a ref?
@@ -857,8 +860,7 @@ Extending these systems to motivate persistent game players through narratives r
 
 \subsection{Ecosystem of Games}
 % % AI concerned with players across multiple distinct games
-
-Games are increasingly diverse and there is a growing long-tail of games appealing to niche interests enabled by digital distribution platforms and online portals.
+Digital distribution and online game portals have led to increasingly diverse games and a growing long-tail of smaller games appealing to niche interests.
 Ecosystems of games push entertainment goals to players' experiences across a number of potentially unrelated games, rather than within a single game.
 %Ecosystems of games shift the focus from a player's experience within a single game to the experience players have across a host of games. 
 % % AZ: not sure if this version or second one is better.
@@ -896,17 +898,19 @@ Linking cross-game data on player-agent interactions to how social actions affec
 %\mytodo{guide to universe of games? optimal sequencing of play for engagement over many games and time}
 %\mytodo{trying to ground things in example roles that have accompanying questions for research. here I have (1) recurring character; (2) human playmate across games (e.g. real-life buddy); (3) game meta-verse guide (shift player b/t games as needed, introduce new, etc.)}
 
-Cross-game agents may also serve as ``game universe guides,'' filling the role of curator and tour guide to ensure players get the most out of a space of possible games.
-Important questions in live production revolve around understanding and eliciting player feedback on games, guiding players to new games as their interests shift, and sequencing the order of games played to optimize player experience.
+Cross-game agents may also serve as ``game universe guides,'' acting as a curator or tour guide to ensure players get the most out of a space of possible games.
+Important challenges 
+%in live production revolve around 
+involve understanding and eliciting player feedback on games, guiding players to new games as their interests shift, and sequencing the order of games played to optimize player experience.
 Cross-game data will be the linchpin to recommending different games and modeling how playing games in different orders (and ways) affects player experience.
 
 \subsubsectionx{How can a Game AI system generate cross-game content?}
 %
 To date procedural content generation systems have been developed on a game-by-game basis.
-Cross-game content generation and adaptation explores how the data acquired about a player in one game can improve the content generation in another game in the ecosystem.
+Cross-game content generation and adaptation explores how data acquired about a player in one game can improve content generation in another game in the ecosystem.
 Cross-game data enables mining game designs for {\em general design knowledge}---a model mapping game mechanics to player behavior. 
-Taken to its extreme, such design knowledge can lead to generating new games that span genres, moving beyond the genre-focused efforts currently being explored.
-Understanding player behavior across games can additionally allow recommending content from other games and ultimately lead to pre-adapting game experiences to players based on their behavior in other games. 
+Taken to its extreme, such design knowledge can lead to generating new games that span genres, moving beyond the current genre-focused efforts.
+Understanding cross-game player behavior can also allow recommending content from other games and ultimately lead to pre-adapting game experiences to players based on their behavior in other games. 
 
 \subsubsectionx{How can a Game AI system add to the game ecosystem?}
 %
@@ -968,16 +972,16 @@ Game AI has an unique opportunity to enhance negative behavior detection and aut
 
 \subsubsectionx{How can Game AI systems improve matchmaking and group content?}
 %
-Matchmaking has traditionally focused on pairing players for competition in order to ensure even win rates.
+Matchmaking has traditionally focused on pairing players for competition to ensure even win rates.
 % [ELO, TrueSkill]. 
 %Some are beginning to consider group-oriented matchmaking.
 %Some extensions have explored group-oriented matchmaking as well [halo guy, other?].
 Online and social games, however, require grouping players for cooperative or synergistic goals. 
-Beyond balancing win rates, players can be grouped to have complementary abilities or be paired for purposes such as mentoring. 
+Beyond balancing win rates, players can be grouped to have complementary abilities or for purposes such as mentoring. 
 %This type of matchmaking requires deeper models of players' abilities beyond score or rank.
 %Further, these pairings often occur in more constrained settings where: the pool of players may be limited or have limited availability, matches may need to be of a variety of types (e.g. FPS capture-the-flag matches or free-for-all deathmatches), and players may specify additional requirements on their desired matching.
-Developing techniques to model player value as a social partner and leveraging that information for creating groups stand as key research problems. 
-Further developments will likely require adopting more sophisticated techniques from the social matching literature \cite{terveen2005:social-matching}. 
+Developing techniques to model player value as a social partner and using that information to create groups stand as key research challenges. 
+Future developments will likely require adopting more sophisticated techniques from the social matching literature \cite{terveen2005:social-matching}. 
 
 %Group-oriented content generation is a related new direction for procedural content generation to pursue with unique constraints and goals imposed by the need to balance between design objectives and potentially conflicting player interests. 
 Group-oriented content generation extends PCG to the setting of engaging multiple players---with potentially conflicting interests---at once.
@@ -998,18 +1002,19 @@ Abusive behaviors include insulting other players or intentionally attempting to
 Across these issues are a broad set of Game AI research challenges associated with responding appropriately to these behaviors. 
 Note that many of these behaviors implicitly require cross-game agents---many forms of negative behavior manifest at the level of human players who act both within specific games and on game forums or other out-of-game socialization venues.
 
-There is a plethora of research on fraud detection, security violations, and related challenges \cite{phua2010:fraud-detection-review}. 
-Little research, however, has addressed the question of how Game AI agents might respond to these activities once detected. 
-Game companies have only recently begun to systematically investigate how to reduce various types of negative behavior beyond banning players (e.g. \cite{lin2013:toxic-behav}). 
+There is a wealth of research on fraud detection, security violations, and related challenges \cite{phua2010:fraud-detection-review}. 
+Little work, however, has addressed how Game AI agents should respond to these activities once detected. 
+Game companies have only recently begun to systematically investigate ways to reduce negative behavior beyond banning players (e.g. \cite{lin2013:toxic-behav}). 
 %Methods to respond to these behaviors are currently limited to banning players or segregating them from others, with few in-game approaches to mediating these interactions or reducing them.
 %
 %Existing research on fraud detection, security violations, and related challenges in voluminous [phua]. Little research, however, has addressed the questions of how game AI agents can best respond to these activities once detected. Game companies have only recently begun to systematically investigate how to reduce various types of negative behavior (e.g. [riot @ GDC]). Methods to respond to these behaviors are currently limited to banning players or segregating them from others, with few in-game approaches to mediating these interactions or reducing them.
 %
 %We hypothesize that many kinds of negative behavior can be reduced or mitigated by adapting automatically game content, rules, and mechanics to incentivize players to reduce negative behaviors.
-We hypothesize that many kinds of negative behavior can be reduced or mitigated by automatically adapting game content, rules, and mechanics to incentivize players to reduce negative behaviors.
-Game AI agents might minimize the negative impact of players by redirecting their actions away from others players. 
-Such agents could also support detection through intentionally eliciting fraudulent or cheating behavior as a kind of double-agent.  
-Beyond negative reinforcement or punishment, Game AI systems can likewise also reward constructive behavior or channel players toward more constructive pursuits.
+We hypothesize that negative behavior can be reduced or mitigated by automatically adapting game content, rules, and mechanics to incentivize players toward pro-social behaviors.
+Game AI agents may minimize a player's negative impact by redirecting their actions away from others players. 
+%Such agents could also support 
+Detection may be improved by intentionally eliciting fraudulent or cheating behavior through an AI double-agent.  
+Beyond negative reinforcement or punishment, Game AI agents can reward positive behavior or channel players toward more constructive pursuits.
 
 %Many kinds of negative behavior may best be handled by systems that can effectively incentivize players to avoid negative behaviors, such as encouraging more cooperative behavior or creating greater long-term social consequences for behaviors. Beyond punishing negative behaviors, game AI agents might keep track of reformed players and adjust to encourage a player's continued good behavior. Drama management and game adaptation techniques are both promising avenues for extension to handle these challenges. 
 
@@ -1017,12 +1022,12 @@ Beyond negative reinforcement or punishment, Game AI systems can likewise also r
 % % AZ: condensed UGC to bring out main ideas. still may not work, but seems like we're missing something in talking about community without noting potential issues around mining UGC for knowledge, better connecting players with content, and interacting with players for richer design feedback
 \subsubsectionx{How can a Game AI system induce user-generated content?}
 %
-User-generated content has become a major force for the continuing interest of players in older games.
+User-generated content has become a major force for players' continuing interest in aging games.
 {\em Minecraft}, {\em Spore}, {\em Second Life}, and a host of other games have demonstrated the power of end-users to continually extend and enhance a live game.
 Despite the growing ubiquity of user-generated content little research has developed methods to elicit needed content, interact with end-users to improve content, or mine design knowledge from this content.
 
 % % interactive ML
-Open questions for future user-generated content systems relate to how AI systems can best incorporate user content and feedback to improve the content created. 
+Open questions for future user-generated content systems relate to how to best incorporate user content and feedback to improve the content created. 
 % % REF notes: risi can go; so can machinations or variations [although I use variations elsewhere] - I think tanagra should stay as it is only real example of mixed-initiative loop in any meaningful way
 Existing research has examined providing preference information (e.g. \cite{hastings2009:gar, risi2012:petalz}) or directly authoring the space of content (e.g. \cite{smith2011:tanagra, smith2010:variations, dormans2009:machinations}). % TAG
 Enhancing user-generated content will require enabling users to teach PCG systems in new ways.
@@ -1077,16 +1082,16 @@ Real-world settings enable new game types including augmented reality games and 
 %, with some form of mapping from real to virtual content. 
 {\em Alternate reality games} overlay fictional contexts on real-world settings without necessarily requiring a visual overlay---Google's Ingress is a prominent example. 
 Both kinds of games, however, are currently circumscribed by challenges in authoring new content and fitting it to new, unanticipated real world contexts---a promising avenue for future PCG research. 
-Preliminary work on merging virtual and real has been conducted in the context of dynamically adapting alternate reality game quests to new physical locations \cite{macvean2011:wequest, gustafsson2006:backseatplayground}.
+Preliminary work on merging the virtual and real has explored dynamically adapting alternate reality game quests to new physical locations \cite{macvean2011:wequest, gustafsson2006:backseatplayground}.
 %Existing games typically work only in a single context, leaving open questions around how AI systems can adapt content to previously unknown situations. Currently, this problem has only been approach in the context of adapting quest-based structures across locations [macvean]. 
 %Further, little work has considered how AI agents should best respond in a context-aware manner that appropriately integrates real-world context with virtual world settings.
-The next stages of this work might incorporate a greater range of real world context into the game, such as social or economic context.
+The next stages of this work may use add other real world context in the game, such as social or economic context.
 %REALLY WANT TO SAY THIS, BUT HOLDING BACK: in essence turing the real world into an enormous, multiplayer live-action role-playing game.
 
-An alternative perspective on the coupling of real and virtual worlds relates to leveraging the semantic information present in real-world data. 
+An alternative perspective on coupling real and virtual worlds involves using the semantic information present in real-world data. 
 %An additional challenge for real-world context in game AI relates to leveraging the semantic information present in real-world data. 
-{\em Data Games} engage players to understand semantic information in open data sets (e.g. US census data) through automatically mapping data into game content \cite{friberger2013:datagames}. 
-Further applications of Game AI should explore ways in-game agents can leverage this out-of-game data for richer interaction with players and game worlds more tightly coupled to real-world contexts.
+{\em Data Games} engage players in understanding semantic information in open data sets (e.g. US census data) through automatically mapping data into game content \cite{friberger2013:datagames}. 
+Future work should explore how in-game agents can leverage out-of-game data for richer interaction with players and tighter coupling of game worlds and real-world contexts.
 
 
 % % AZ: where (if anywhere) do we mention work on physiological signals for games? affective agents and physiology is a growing area, but I don't see it in our agenda per se except perhaps as it connects back to real-world context notions. just feels like a gap given we bring up EEG and Kinect but then only talk about real-world context + pro-active sensing.
@@ -1096,9 +1101,9 @@ Further applications of Game AI should explore ways in-game agents can leverage 
 \subsubsectionx{How can a Game AI system leverage out-of-game social networks?}
 %
 Modeling in-game social interactions, social networks, and player communities can enable Game AI agents to interact with players as part of a social world that (partially) overlaps the in-game world. 
-Current research in online game social networks has explored detecting social information including group identities \cite{grappiolo2013:group-identification}, shared housing networks \cite{ahmad2011:goldmining-hypergraph}, or real-money trade \cite{fujita2011:rmt-detect}. 
+Current research on online game social networks has explored detecting social information including group identities \cite{grappiolo2013:group-identification}, shared housing networks \cite{ahmad2011:goldmining-hypergraph}, and real-money trade \cite{fujita2011:rmt-detect}. 
 Outside of games a wealth of prior work on modeling techniques for social and economic networks exists \cite{jackson2010:soc-econ-networks}.
-Here we ask: how can Game AI systems leverage social networks from outside a game to improve in-game experiences?
+Here we ask: how can Game AI systems use social networks from outside a game to improve in-game experiences?
 
 %Player in-game social networks can relate to relevant out-of-game behavior, such as fraud [williams]. 
 Overall, relating in-game interactions to out-of-game social interaction remains underexplored.
@@ -1135,12 +1140,12 @@ Game content---possibly a quest in an alternate reality game---can be generated 
 Additional applications of the proactive sensing paradigm can target other hidden real-world information such as player preferences, skills, and attitudes or semantic information about real-world objects and locations.
 % like museum exhibit style or apartment neighborhood quality.
 
-Proactive sensing research opens a host of questions around modeling the quality of information known about the world, the abilities of players to provide that information, and challenges in generating game-relevant content and agent behaviors to help elicit this information. 
-Human computation research has broadly explored problems around modeling human abilities to perform tasks that provide computers with information about the real world \cite{law2011:hcomp-book}. 
+Proactive sensing research will require modeling the quality of information known about the world player abilities to provide that information, and challenges in generating game-relevant content and agent behaviors to elicit this information. 
+Human computation research has modeled human abilities to perform tasks that provide computers with information about the real world \cite{law2011:hcomp-book}. 
 %Specific models have captured uncertainty in label quality for objects [REF] and various kinds of uncertainty around human labeling abilities [REF]. 
-Extending these approaches to games will require incorporating notions of player motivation to perform or complete game tasks.
+Extending these approaches to games will involves incorporating player motivation to perform or complete game tasks.
 % and attempt to cheat game systems.
-Key research problems will involve balancing the potential tension between game design goals and information needs and developing methods to generate game tasks and agent behaviors appropriate to a wide variety of information needs.
+Key research problems will include balancing between game design goals and information needs and generating game tasks and agent behaviors appropriate to a wide variety of information needs.
 % problem analogy issue: can system learn generic mapping from in-game task to out-game info needed? cross-gam1e employ?
 
 %Automatically producing problems to satisfy desired game-based goals has recently emerged in the context of educational game content [andersen, guwani, smith refraction]. Many open problems remain in ensuring these games have desirable gameplay properties while still eliciting target information reliably. Building on this research will require investigating agent behaviors that encourage players to complete desired tasks.
@@ -1174,11 +1179,11 @@ Key research problems will involve balancing the potential tension between game 
 
 \section{Conclusions}
 
-The computer game industry is experiencing a shift to persistent games, new business models emphasizing game ecosystems, greater support for game communities, and new considerations for incorporating real world context into game worlds.
+The digital game industry is experiencing a shift to persistent games, business models emphasizing game ecosystems, more support for game communities, and new considerations for incorporating real world context into game worlds.
 We see these advances as positive signs of growth and maturity in the game industry.
-We also see these advances as pushing the boundaries on scalability game development practices.
+We also see these advances pushing the bounds on the scalability of game development practices.
 
-Artificial intelligence, computational intelligence, and machine learning have always excelled at addressing problems of scalability by automating certain tasks and dynamically adapting system behavior.
+Artificial intelligence, computational intelligence, and machine learning have always excelled at addressing problems of scalability by automating tasks and dynamically adapting system behavior.
 Game AI
 %---the use of 
 %%artificial intelligence, computational intelligence, and machine learning 
@@ -1191,10 +1196,13 @@ AI Designers have supported and augmented the development of individual games th
 We envision AI Producers taking on a new role of augmenting and scaling the game production pipeline, supporting the entire span of live operations in games, enhancing cross-game interoperations, nurturing strong player communities, and coupling real and virtual contexts.
 This vision is bolstered by the massive amounts of data being generated and collected by the game development industry.
 
-The twelve new Game AI research questions we present in this paper require game developers to see Game AI as taking on a new role and involving a new stakeholder not previously considered.
+The twelve new Game AI research questions here require game developers to see Game AI as part of live game production.
+%The twelve new Game AI research questions we present in this paper require game developers to see Game AI in a new role and involving a new stakeholder not previously considered.
 %a new paradigm of Game AI as Producer.
-AI for game production does not supplant or replace existing research challenges or perspectives on Game AI, but enhances the scope and range of relevance of the field of Game AI as a whole.
-In light of the shifting landscape of the computer game industry, addressing these research questions with credible AI solutions will result in immediate relevance to game developers and may present a new vector for industry game development and academic Game AI research collaboration. 
+%AI for game production does not supplant or replace existing research challenges or perspectives on Game AI, but enhances the scope of the field of Game AI as a whole.
+AI for game production does not supplant previous challenges in Game AI---it extends the scope of the field of Game AI as a whole.
+%In light of the shifting landscape of the computer game industry, addressing these research questions with credible AI solutions will result in immediate relevance to game developers and may present a new vector for industry game development and academic Game AI research collaboration. 
+Addressing these problems with credible AI solutions will result in immediate relevance to game developers and may present a new vector for industry game development and academic Game AI research collaboration. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
