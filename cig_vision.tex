@@ -368,15 +368,15 @@
 % use a multiple column layout for up to three different
 % affiliations
 \author{
-\IEEEauthorblockN{Alexander Zook}
-\IEEEauthorblockA{School of Interactive Computing\\
-Georgia Institute of Technology\\
-a.zook@gatech.edu}
-\and
 \IEEEauthorblockN{Mark Owen Riedl}
 \IEEEauthorblockA{School of Interactive Computing\\
 Georgia Institute of Technology\\
 riedl@cc.gatech.edu}
+\and
+\IEEEauthorblockN{Alexander Zook}
+\IEEEauthorblockA{School of Interactive Computing\\
+Georgia Institute of Technology\\
+a.zook@gatech.edu}
 }
 
 % conference papers do not typically use \thanks and this command
@@ -537,7 +537,7 @@ The growing diversity of game players has led to additional emphasis on ensuring
 
 \begin{figure*}
 \centering
-\includegraphics[scale=0.7]{metaphor}
+\includegraphics[scale=0.7]{metaphor.pdf}
 %\caption{Three paradigms of Game AI. The {\em AI as Actor} paradigm describes how AI mediates between the user and the game itself. The {\em AI as Designer} paradigm describes how AI mediates between a single game developer and the human-computer system of player and game. The {\em AI as Producer} is a new paradigm describing how AI mediates between producers and many systems of designers, users, and games.}
 \caption{Three roles of Game AI and their human stakeholders.
 {\em AI as Actor} describes how AI mediates between the player and the game itself. 
@@ -618,7 +618,7 @@ These three roles are not distinct phases in the pursuit of Game AI, but overlap
 %At no point are we suggesting that one perspective on Game AI has been replaced by another or that future Game AI researchers should abandon their valuable contributions to work on new research questions.
 We see AI Producers as a superset of AI Designers, encompassing a broader set of research questions. 
 Equivalently, we see this as a shift from Game AI for game design to Game AI for game production. 
-In industry the differences between designers and producers have blurred as technical barriers to content production have lowered and gameplay and business (e.g. monetization and viral marketing) are more tightly coupled.
+In industry the differences between designers and producers have blurred as technical barriers to content production have lowered and gameplay and business (e.g. monetization and marketing) are more tightly coupled.
 
 %Data-driven game AI leads to a shift in the role of AI in game design and development. Historically, game AI has seen a shift between two waves of research. 
 %``Classical'' game AI developed systems to mediate the role of AI between users and a game (Figure X). AI served the role of an artificial human opponent or playmate, enabling play without requiring other people or filling roles humans would be loathe to fill in a game. The second wave of game AI shifted to developing AI systems that mediate between designers and the coupled user-game systems they develop. AI served to analyze and visualize game data, model players within a game, generate game content, and even potentially adapt game content by fusing modeling and generation. The third wave of game AI that is emerging demands a further step back to study how AI can mediate between game producers and their portfolio of games. AI should support interacting with players and player communities over long spans of time, across multiple games, while bridging in-game and real-world systems and leveraging user-created content.
@@ -749,9 +749,11 @@ AI producers will use the wealth of data being generated to meet the needs impos
 In each case these forces provide unique opportunities for data-driven approaches to Game AI that enhance player experience through richer sources of information and emerging modes of game-related interaction. 
 Rather than replace earlier roles and stakeholders of Game AI, we assert that the new role of AI as Producer must emerge to address the novel concerns raised by the four forces.
 % introduce novel opportunities to address concerns and enhance techniques from earlier roles.
-This new role for Game AI enhances and extends the AI techniques defined from earlier roles.
+This new role for Game AI enhances and extends the AI techniques defined from earlier roles,
+leading to new research questions and techniques that potentially overlap multiple roles.
+% MOR: establish the expectation that people will see research questions and techniques that can be of more than one role. One or two sentences out to be all that is necessary.
 %
-In the next sections, we revisit the forces and the research questions that accompany them.
+In the next sections, we revisit the forces and the research questions that accompany them, including those relevant to existing roles for Game AI.
 
 \subsection{Persistent Games}
 % % AI stretching to long-term AI-player relationships
@@ -1080,7 +1082,7 @@ Understanding how AI agents can (or should) use context is an open problem for f
 Real-world settings enable new game types including augmented reality games and alternate reality games. 
 {\em Augmented reality games} visually project virtual game content onto the real-world situation.
 %, with some form of mapping from real to virtual content. 
-{\em Alternate reality games} overlay fictional contexts on real-world settings without necessarily requiring a visual overlay---Google's Ingress is a prominent example. 
+{\em Alternate reality games} overlay fictional contexts on real-world settings without necessarily requiring a visual overlay---Google's \textit{Ingress} is a prominent example. 
 Both kinds of games, however, are currently circumscribed by challenges in authoring new content and fitting it to new, unanticipated real world contexts---a promising avenue for future PCG research. 
 Preliminary work on merging the virtual and real has explored dynamically adapting alternate reality game quests to new physical locations \cite{macvean2011:wequest, gustafsson2006:backseatplayground}.
 %Existing games typically work only in a single context, leaving open questions around how AI systems can adapt content to previously unknown situations. Currently, this problem has only been approach in the context of adapting quest-based structures across locations [macvean]. 
